@@ -1,0 +1,27 @@
+.main-page-installation-system{
+    /* padding: 30%; */
+    background-image: url("https://inkafixing.com/Uploads/images/Slayt/slide-bg.jpeg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* background-size: cover; */
+}
+.description{
+    padding-top: 25%;
+    padding-left: 10%;
+    padding-right: 45%;
+    font-family: "Montserrat", sans-serif;
+
+}
+image{
+    height: 100vh;
+}
+
+#Contact-1{
+    background-color: #dc1e34;
+}
+#Contact-2{
+    background-color: #25607c;
+    background-color: #dc1e34;
+
+}

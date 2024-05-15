@@ -1,0 +1,9 @@
+#logo_2{
+    width: 120px;
+    border-left: solid 3px  rgb(0, 0, 0) ;
+    padding-left: 5%;
+}
+.contacts-installation:hover button{
+    border-color: #dc1e34;
+    background-color: #dc1e34 ;
+}

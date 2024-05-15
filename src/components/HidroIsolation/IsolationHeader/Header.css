@@ -1,0 +1,60 @@
+.logo{
+    width: 80px;
+    gap: 10px;
+}
+.logo:hover{
+    cursor: pointer;
+}
+#logo-2{
+    width: 150px;
+    border-left: solid black 3px;
+    padding-left: 5%;
+}
+
+.Header{
+    /* margin-top: 1%; */
+    margin-left: 5%;
+
+    position: absolute;
+    display: flex;
+    gap: 24%;
+    width: 90%;
+    color: black;
+}
+.info{
+    display: flex;
+    width:  100%;
+    font-family: sans-serif;
+    font-size: 18px;
+    gap: 15%;
+    text-align: center;
+    /* margin-right: 5%; */
+    align-items: center;
+
+}
+
+.info:hover{
+    cursor: pointer;
+}
+button{
+    font-family: Sans-serif;
+    /* height: 30%; */
+
+    font-size: 17px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    fill: #FFFFFF;
+    color: black;
+    background-color: #FFFFFF00;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: black;
+    border-radius: 1000px 1000px 1000px 1000px;
+    padding: 12px 30px 12px 30px;
+    transition: 0.3s;
+
+}
+#contacts-3 button:hover{
+    background-color: #5BBDB3;
+    border-color: #5BBDB3;
+    color: white;
+}

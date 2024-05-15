@@ -1,0 +1,44 @@
+.Technology-1{
+    padding-left: 10%;
+    padding-top: 18%;
+    /* padding-bottom: 10%; */
+    padding-right: 20%;
+    background-image: url('https://krystaline.es/wp-content/uploads/2023/10/krystaline-tecnologia_csh-web.jpg');
+    height: 80vh;
+    font-size: 45px;
+    color: #FFFFFF;
+    font-family: "Oswald", Sans-serif;
+    /* font-size: 7.5vw; */
+}
+.Technology-1 button{
+        font-family: "Roboto", Sans-serif;
+        font-weight: 500;
+        font-size: 17px;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        fill: #FFFFFF;
+        color: #FFFFFF;
+        border-color: #5BBDB3;
+        background-color: #5BBDB3;
+        border-style: solid;
+        border-width: 1px 1px 1px 1px;
+        border-radius: 1000px 1000px 1000px 1000px;
+        padding: 15px 30px 15px 30px;
+        transition: 0.3s ;
+}
+.Technology-1 button:hover{
+    border-color: #4d9b94;
+    background-color: #4d9b94;
+    cursor: pointer;
+}
+.descc{
+    /* padding-top: 10%; */
+    display: grid;
+    padding-left: 10%;
+    padding-right: 20%;
+    grid-template-columns: 45% 70%;
+    align-items: center;
+    height: 100vh;
+}
+#uses-of-csh{
+    background-color: #F5F5F5
+}

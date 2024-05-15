@@ -1,0 +1,22 @@
+.Products{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+
+    height: 100vh;
+
+}
+.hidro-products-detail{
+    display: flex;
+    gap: 5%;  
+    
+}
+
+.hidro-product {
+    width: 100%; 
+    height: 65vh;
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 15px 15px 15px 15px;
+    padding: 5%;    
+}

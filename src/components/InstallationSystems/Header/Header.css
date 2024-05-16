@@ -6,4 +6,5 @@
 .contacts-installation:hover button{
     border-color: #dc1e34;
     background-color: #dc1e34 ;
+    color: white;
 }

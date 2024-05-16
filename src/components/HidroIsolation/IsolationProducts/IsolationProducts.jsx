@@ -1,6 +1,7 @@
 import React from "react";
 import './IsolationProducts.css' 
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function IsolationProducts(){
 
@@ -24,17 +25,23 @@ export default function IsolationProducts(){
 
     ]
 
+    const navigate = useNavigate()
+    
     const {id} = useParams();
+
+    const url = id
 
     return(
         <>
-            <div className="Container">
+            <div className="hidroisolation-product-elements">
                 <div className="product-name">
                     <h1>{id}</h1>
                 </div>
-                <div className="products">
+                <div className="Services">
                     {products.map((product) => (
-                        <div className="product">
+                        <div className="Service" onClick={() => {
+                            navigate("/isolation-system/products/"+{url}+"/"+ product.name);
+                        }} >
                             <img src={product.url} alt="" />
                             <h2><b> {product.name}</b></h2>
                         </div>

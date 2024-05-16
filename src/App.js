@@ -12,6 +12,7 @@ import IsolationServices from './components/HidroIsolation/IsolationServices/Ser
 import Technology from './components/HidroIsolation/IsolationTechnology/Technology';
 import InstallationBody from './components/InstallationSystems/InstallationBody/InstallationBody';
 import InstallationSystem from './components/InstallationSystems/MainPage/MainPage';
+import IsolationProductDetails from './components/HidroIsolation/IsolationProductDetails/ProductDetails';
 function App() {
   return (
     <>
@@ -26,6 +27,8 @@ function App() {
          <Route exact path="/isolation-system" Component={Isolation}/>
          <Route exact path = "/isolation-system/products" Component={IsolationServices}/>
          <Route exact path = "/isolation-system/products/:id" Component={IsolationProducts}/>
+         <Route exact path = "/isolation-system/products/:id/:product_id" Component={IsolationProductDetails}/>
+
          <Route exact path = "/isolation-system/technology" Component={Technology}/>
       </Route>
 

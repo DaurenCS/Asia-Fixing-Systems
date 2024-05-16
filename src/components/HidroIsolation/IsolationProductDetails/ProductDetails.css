@@ -1,0 +1,25 @@
+.product-details .descriptions{
+    padding-bottom: 100px;
+}
+.descriptions button{
+    margin-top: 25px;
+}
+.descriptions button:hover{
+    background-color: #5BBDB3;
+    border-color: #5BBDB3;
+    color: white;
+}
+
+.product-details .descriptions .name{
+    font-size: 60px;
+
+}
+.product-details{
+    display: flex;
+    padding: 10%;
+    align-items: center
+
+}
+.product-details img{
+    border-radius: 15px;
+}

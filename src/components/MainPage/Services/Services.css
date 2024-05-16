@@ -1,11 +1,11 @@
 .Services{
-    display: grid; 
-    padding-left: 15%;
-    padding-right: 15%;
+    display: flex; 
+    /* padding-left: 15%; */
+    /* padding-right: 15%; */
     gap: 5%;
     justify-content: center;
     max-width:max-content;
-    grid-template-columns: 40% 40%;
+    /* grid-template-columns: 40% 40%; */
     margin-top:5% ;
 
     margin-bottom:10% ;
@@ -45,6 +45,7 @@ img{
     border-color: #f4f8fd;
     border-radius: 10px 10px 10px 10px;
     overflow: hidden;
+    width: 40%;
     
 }
 .Service:hover{

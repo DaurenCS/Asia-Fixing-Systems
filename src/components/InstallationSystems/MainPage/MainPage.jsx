@@ -1,11 +1,14 @@
 import React ,{useEffect } from "react";
-
+import InstallationServices from "../InstallationServices/Services";
 import './MainPage.css'
 
 export default function InstallationSystem(){
     useEffect(() => {
         window.scrollTo(0, 0); 
     }, []);
+
+
+
     return(
         <>
             <div className="main-page-installation-system">
@@ -16,10 +19,7 @@ export default function InstallationSystem(){
                     
                     </div>
                 </div>
-                <div className="Products">
-                    <h1>PRODUCTS</h1>
-                    
-                </div>
+                <InstallationServices></InstallationServices>             
             </div>
         
         </>

@@ -24,7 +24,7 @@ function Header() {
 
             <div className="user-info">
                 <a href="#main">Main</a>
-                <a href="#services">Services</a>
+                <a href="#services">Products</a>
                 <a href="#company">About us</a>
                 <div className='button-header'>
                     <a href="#contacts"><button id="bbb"> Contact us</button></a>

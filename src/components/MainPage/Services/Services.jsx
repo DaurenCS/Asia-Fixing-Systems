@@ -29,7 +29,7 @@ export default function Services() {
     return(
         <div id="services" className="Block-2">
             <h1 className="desc">
-                <span>Services</span>
+                <span>Products</span>
             </h1>
             <div className="Services">
                 {services.map((service)=>(

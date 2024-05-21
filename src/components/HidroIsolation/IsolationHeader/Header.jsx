@@ -13,7 +13,7 @@ export default function IsolationHeader() {
                 <div className='logo'>
 
                     <img onClick={() => {navigate("/")}} id= 'logo-1' src={logo} alt="" />
-                    <img onClick={() => {navigate("/isolation-system")}} id='logo-2' src="https://krystaline.es/wp-content/uploads/2023/10/logo-negro-krystaline-172x32px.png" alt="" />
+                    <img onClick={() => {navigate("/isolation-system")}} id='logo-2' src="https://krystaline.es/wp-content/uploads/2023/10/logo-negro-krystaline-172x32px.png  " alt="" />
                 </div>
                 <div className='info'>
                     <div className='products' onClick={() => {navigate("/isolation-system/products")}}>
@@ -26,7 +26,7 @@ export default function IsolationHeader() {
                         <p><b>Certificates and Tests</b></p>
                     </div>
                     <div className='contacts' id='contacts-3' onClick={() => {navigate("/contacts")}}>
-                        <button>Contact Us</button>
+                        <button id="bbb">Contact Us</button>
                     </div>
                     
                         

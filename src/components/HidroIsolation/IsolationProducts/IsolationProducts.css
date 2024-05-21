@@ -10,6 +10,10 @@
     gap: 5%;
     /* flex-wrap: wrap; */
 }
+.hidroisolation-product-elements .Service img{
+    mix-blend-mode:darken;
+
+}
 /* .product{
     flex-grow: 1;
     flex-basis: 200;   

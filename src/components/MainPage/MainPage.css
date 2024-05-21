@@ -1,7 +1,7 @@
 .block-1 {
     height: 450px;
-    background-image:linear-gradient(rgba(196, 196, 196, 0.852), rgba(202, 202, 202, 0.249)),
-    url('https://t4.ftcdn.net/jpg/02/20/67/65/360_F_220676590_4zfuo3TKXbys7xkC4Nx0YYFcMzkCkHTf.jpg');    
+    background-image:linear-gradient( to right, rgba(255, 255, 255, 0.349), rgba(109, 109, 109, 0.249)),
+    url('https://media-public.canva.com/8vAFw/MAE8kI8vAFw/1/s2.jpg');    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

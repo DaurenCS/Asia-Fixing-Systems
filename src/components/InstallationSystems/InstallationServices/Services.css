@@ -8,18 +8,29 @@
 .installation-products-detail .hidro-product{
     height: 100%;
 } */
+.Products{
+  padding-top: 20%;
+}
 .Services-1{
-   /* display: flex; */
    display: grid;
    grid-template-columns: 30% 30% 30%;
-   gap: 5%;
+   column-gap: 5%;
+   row-gap: 5%;
    align-items: center;
+   grid-row-gap: 20px;
+   
 
 }
 .Service-1{
+    border-radius: 15px 15px 15px 15px;
+
     overflow: hidden;
     background-color: #edeef3;
     
+}
+.Service-1 img{
+  mix-blend-mode:darken;
+
 }
 .descrr{
     padding: 4%;
@@ -33,13 +44,12 @@
 
 }
 
-button{
+.descrr button{
     padding-left: 1px;
     border: none;
 }
 
-.descripion-benefits{
-}
+
 
 .button span {
     cursor: pointer;

@@ -4,7 +4,6 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import MainBody from './components/MainPage/MainBody/MainBody';
 import Company from './components/MainPage/Company/Company';
 import MainPage from './components/MainPage/MainPage';
-import ProductList from './components/ProductList/ProductList';
 import Isolation from './components/HidroIsolation/Isolation'
 import IsolationBody from './components/HidroIsolation/IsolationBody/IsolationBody';
 import IsolationProducts from './components/HidroIsolation/IsolationProducts/IsolationProducts';
@@ -13,14 +12,16 @@ import Technology from './components/HidroIsolation/IsolationTechnology/Technolo
 import InstallationBody from './components/InstallationSystems/InstallationBody/InstallationBody';
 import InstallationSystem from './components/InstallationSystems/MainPage/MainPage';
 import IsolationProductDetails from './components/HidroIsolation/IsolationProductDetails/ProductDetails';
+import InstallationProducts from './components/InstallationSystems/InstallationProducts/Products';
+import { LoadingProvider } from './components/Loader/LoadingContext';
 function App() {
   return (
-    <>
+    <LoadingProvider>
     <Routes>
+      <Route path="*" element={<Navigate from="*" to="/" />} />
       <Route exact path="/" Component={MainBody}>
         <Route exact path="/" Component={MainPage} />
         <Route exact path="/about" Component={Company} />
-        <Route exact path="/products" Component={ProductList} />
       </Route>
       
       <Route exact path="/isolation-system" Component={IsolationBody}>
@@ -34,13 +35,15 @@ function App() {
 
       <Route exact path="/installation-system" Component={InstallationBody}> 
         <Route exact path="/installation-system" Component={InstallationSystem}/>
+        <Route exact path="/installation-system/products" Component={InstallationProducts}/>
+        <Route exact path="/installation-system/products/:id" Component={InstallationProducts}/>
         
         
 
       </Route>
 
     </Routes>
-    </>
+    </LoadingProvider>
   );
 }
 

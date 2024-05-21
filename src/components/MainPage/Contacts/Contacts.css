@@ -1,4 +1,10 @@
 .Contacts{
-    height: 85vh ;
+    height: 80vh ;
+    padding-top: 5%;
+    padding-right: 15%;
+
     padding-left: 10%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    column-gap: 10%;
 }

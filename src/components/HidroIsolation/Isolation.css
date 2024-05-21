@@ -38,20 +38,17 @@ video{
     display: flex;
     gap: 5%;
 }
-.Buttons button{
-    font-family: "Roboto", Sans-serif;
-    font-weight: 500;
-    font-size: 17px;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    fill: #FFFFFF;
-    color: #FFFFFF;
-    background-color: #FFFFFF00;
-    border-style: solid;
-    border-width: 1px 1px 1px 1px;
+.Buttons #bbb{
+    background-color:#ffffff00;
+    color: white;
     border-color: #FFFFFF;
-    border-radius: 1000px 1000px 1000px 1000px;
-    padding: 15px 30px 15px 30px;
 }
+.Buttons #bbb:hover{
+    background-color:#004258;
+    color: white;
+    border-color: #004258;
+}
+
 .Buttons button:hover {
     /* background-color: #5BBDB3; */
     cursor: pointer;

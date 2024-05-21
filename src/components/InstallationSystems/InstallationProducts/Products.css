@@ -1,0 +1,64 @@
+
+.installation-products-elements{
+    padding: 10% 5% 10% 3%;
+    /* padding-top: 10%;
+    padding-left: 3%;
+    padding-right: 5%; */
+    height: 100vh;
+    background-color: #f8f8f8;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    column-gap: 5%;
+
+}
+.installation-products{
+}
+
+.installation-products-list{
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin-right: 10%;
+    grid-column-gap: 20px;
+}
+
+.installation-product{
+    background-color: #edeef3;
+    height: 400px;
+    padding: 5%;
+    border-radius: 15px 15px 15px 15px;
+
+}
+.installation-product img{
+    mix-blend-mode:darken;
+    padding-bottom: 25%;
+
+}
+
+.side-bar{
+    background-color: white;
+    padding: 5%;
+    
+    border-radius: 15px;
+    border: solid 1px #edeef3;
+    font: 14px sans-serif;
+    font-weight: 300;
+    line-height: 110%;
+    transition: 0.3s;
+
+}
+.category{
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
+.category:hover{
+    transition: 0.1s;
+    cursor: pointer;
+    color: red;
+
+}
+.type-name :hover {
+    transition: 0.1s;
+    cursor: pointer;
+    color: red;
+}

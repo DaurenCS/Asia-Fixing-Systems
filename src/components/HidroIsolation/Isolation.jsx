@@ -59,9 +59,9 @@ export default function Isolation(){
                     <div className="description-1">
                         <h1>ADMIXTURES FOR WATERPROOFING CONCRETE WITH CSH TECHNOLOGY</h1>
                         <div className="Buttons">
-                            <button id="Contact">Contact Us</button>
+                            <button id="bbb">Contact Us</button>
                     
-                            <button>About Technology</button>
+                            <button id="bbb">About Technology</button>
                         </div>
                     </div>  
                 </div>

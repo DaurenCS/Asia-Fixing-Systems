@@ -13,17 +13,19 @@ export default function Contacts(){
                 
                 <div className="contact-details">
 
-                <div className="phone">
+                <div className="contacts-details">
+                    <img src="https://cdn-icons-png.flaticon.com/512/684/684853.png" alt="" />
                     <h3>+7(747)675-64-77</h3>
                 </div>
-                <div className="email">
+                <div className="contacts-details">
+                    <img src="https://cdn-icons-png.flaticon.com/512/684/684869.png" alt="" />
                     <h3>d_kozhakhmetov@kbtu.kz</h3>
                 </div>
-                <h3>
-                    <address>
-                        Almaty, Kazakhstan
-                    </address>
-                </h3>
+                <div className="contacts-details">
+                    <img src="https://cdn-icons-png.flaticon.com/512/684/684850.png" alt="" />
+                    <h3><address>Almaty, Kazakhstan</address></h3>
+                </div>
+                   
                  </div>
             </div>
             <div className="contact-image">

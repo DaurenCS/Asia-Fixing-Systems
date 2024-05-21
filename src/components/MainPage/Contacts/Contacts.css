@@ -8,3 +8,12 @@
     grid-template-columns: 40% 60%;
     column-gap: 10%;
 }
+.contact-details img{
+    width: 20px;
+}
+.contacts-details{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    
+}

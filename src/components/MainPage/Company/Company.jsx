@@ -18,13 +18,13 @@ export default function Company(){
                         <h3>aaa@gmail.com</h3>
                     </div>
                     <div className="contacts-icons">
-                        <a href="">
+                        <a href="https://www.instagram.com/kozhakhmet_off/">
                             <img src="https://cdn-icons-png.flaticon.com/128/1400/1400829.png" alt="" />
                         </a>
                         <a href="">
                             <img src="https://cdn-icons-png.flaticon.com/128/1051/1051309.png" alt="" />
                         </a>
-                        <a href="">
+                        <a href="https://wa.me/77476756477">
                             <img src="https://cdn-icons-png.flaticon.com/128/3536/3536479.png" alt="" />
                         </a>
                     </div>

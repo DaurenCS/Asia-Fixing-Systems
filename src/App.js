@@ -15,6 +15,9 @@ import IsolationProductDetails from './components/HidroIsolation/IsolationProduc
 import InstallationProducts from './components/InstallationSystems/InstallationProducts/Products';
 import { LoadingProvider } from './components/Loader/LoadingContext';
 import InstallationTechnology from './components/InstallationSystems/InstallationTechnology/Technology';
+import IsolationCertificate from './components/HidroIsolation/IsolationCertificates/Certificates';
+import InstallationCertificate from './components/InstallationSystems/InstallationCertificates/Certificates';
+import Contacts from './components/MainPage/Contacts/Contacts';
 function App() {
   return (
     <LoadingProvider>
@@ -23,6 +26,8 @@ function App() {
       <Route exact path="/" Component={MainBody}>
         <Route exact path="/" Component={MainPage} />
         <Route exact path="/about" Component={Company} />
+        <Route exact path="/contacts" Component={Contacts} />
+        
       </Route>
       
       <Route exact path="/isolation-system" Component={IsolationBody}>
@@ -30,7 +35,7 @@ function App() {
          <Route exact path = "/isolation-system/products" Component={IsolationServices}/>
          <Route exact path = "/isolation-system/products/:id" Component={IsolationProducts}/>
          <Route exact path = "/isolation-system/products/:id/:product_id" Component={IsolationProductDetails}/>
-
+         <Route exact path= "/isolation-system/certificates" Component={IsolationCertificate}/>
          <Route exact path = "/isolation-system/technology" Component={Technology}/>
       </Route>
 
@@ -38,6 +43,7 @@ function App() {
         <Route exact path="/installation-system" Component={InstallationSystem}/>
         <Route exact path="/installation-system/products" Component={InstallationProducts}/>
         <Route exact path="/installation-system/products/:id" Component={InstallationProducts}/>
+        <Route exact path= "/installation-system/certificates" Component={InstallationCertificate}/>
         <Route exact path="/installation-system/technology" Component={InstallationTechnology}/>
         
         

@@ -5,7 +5,7 @@ import { useTypes } from "../../../hooks/views";
 import { useLoading } from "../../Loader/LoadingContext";
 import Loader from '../../Loader/Loader';
 
-export default function InstallationServices({products}) {
+export default function InstallationServices({types}) {
     const navigate = useNavigate();
     const { loading } = useLoading();
 
@@ -19,7 +19,7 @@ export default function InstallationServices({products}) {
                         <h1>PRODUCTS</h1>
                     </div>
                     <div className="Services-1">
-                        {products.map((product) => (
+                        {types.map((product) => (
                             <div
                                 key={product.id}
                                 className="Service-1"

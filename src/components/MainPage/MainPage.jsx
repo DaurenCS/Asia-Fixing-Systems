@@ -4,6 +4,7 @@ import './MainPage.css';
 import Services from "./Services/Services";
 import Company from "./Company/Company";
 import Contacts from "./Contacts/Contacts";
+import { useNavigate } from "react-router-dom";
 export default function MainPage(){
     useEffect(() => {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -24,6 +25,8 @@ export default function MainPage(){
             });
         });
     }, []);
+    
+    const navigate = useNavigate()
     return(
         <>
         {/* <Header/> */}
@@ -34,7 +37,7 @@ export default function MainPage(){
                         <span class="color_11 wixui-rich-text__text">Innovative Solutions for Modern Construction</span> 
                     </div>
                     <p className="Description-1">A company engaged in the supply of advanced building materials and construction technologies</p>
-                    <button id="bbb"> Contact us</button>
+                    <button id="bbb" onClick={() => {navigate("/contacts")}}> Contact us</button>
                 </div>
                 <div className="description-images">
                     <img src="" alt="" />

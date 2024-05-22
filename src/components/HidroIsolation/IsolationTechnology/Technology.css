@@ -3,7 +3,9 @@
     padding-top: 18%;
     /* padding-bottom: 10%; */
     padding-right: 20%;
-    background-image: url('https://krystaline.es/wp-content/uploads/2023/10/krystaline-tecnologia_csh-web.jpg');
+    background-image:linear-gradient( to right, rgba(0, 0, 0, 0.612), rgba(255, 255, 255, 0.249)),
+    url('https://krystaline.es/wp-content/uploads/2023/10/krystaline-tecnologia_csh-web.jpg');
+    
     height: 80vh;
     font-size: 45px;
     color: #FFFFFF;

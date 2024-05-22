@@ -10,13 +10,13 @@ import { Link } from 'react-router-dom';
 const services = [
     {
         id: "isolation-system",
-        name: "Гидроизоляция",
-        description: "ДОБАВКИ ДЛЯ ГИДРОИЗОЛЯЦИИ БЕТОНА ПО ТЕХНОЛОГИИ CSH",
+        name: "Hidroisolation",
+        description: "Additives for concrete Waterproofing using C-S-H Technology",
         url: image
     },
     {
         id: "installation-system",
-        name: "Монтажные системы",
+        name: "Installation System",
         description: "Inka Fixing continues to make your life easier with its structural connections, while making its impact felt in all areas of life. We are with you in all application areas with our smart solutions.",
         url: immage
     },

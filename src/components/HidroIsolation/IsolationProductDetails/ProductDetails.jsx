@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 export default function IsolationProductDetails(){
+    const navigate = useNavigate()
     const product = 
         {
             url : "https://krystaline.es/wp-content/uploads/2023/11/krystaline-add1-bote-700x700-1.jpg",
@@ -27,7 +28,7 @@ export default function IsolationProductDetails(){
                         
                         {sentence}</p>
                 ))}
-                <button>Request More Information</button>
+                <button id="bbb" onClick={() => {navigate("/contacts")}}>Request More Information</button>
             </div>
             <div className="image">
                 <img src={product.url} alt="" />

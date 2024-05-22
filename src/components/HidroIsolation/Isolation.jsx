@@ -59,9 +59,9 @@ export default function Isolation(){
                     <div className="description-1">
                         <h1>ADMIXTURES FOR WATERPROOFING CONCRETE WITH C-S-H TECHNOLOGY</h1>
                         <div className="Buttons">
-                            <button id="bbb">Contact Us</button>
+                            <button id="bbb" onClick={() => {navigate("/contacts")}}>Contact Us</button>
                     
-                            <button id="bbb">About Technology</button>
+                            <button id="bbb" onClick={() => {navigate("/isolation-system/technology")}}>About Technology</button>
                         </div>
                     </div>  
                 </div>

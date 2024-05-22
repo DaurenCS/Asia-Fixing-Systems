@@ -1,13 +1,15 @@
 import React from "react";
 import './Technology.css'
+import { useNavigate } from "react-router-dom";
 
 
 export default function Technology(){
+    const navigate = useNavigate()
     return (
         <>
             <div className="Technology-1">
-                <h1><b>CSH TECHNOLOGY BY KRYSTALINE</b></h1>
-                <button>Contact US</button>
+                <h1><b>C-S-H TECHNOLOGY BY KRYSTALINE</b></h1>
+                <button id="bbb" onClick={() => {navigate("/contacts")}}>Request more Information</button>
             </div>
             <div id="Description" className="descc">
                 <h3><b>WHAT IS CSH TECHNOLOGY</b></h3>

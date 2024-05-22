@@ -4,6 +4,7 @@ import InstallationServices from "../InstallationServices/Services";
 import { useLoading } from "../../Loader/LoadingContext";
 import Loader from '../../Loader/Loader';
 import { useTypes } from "../../../hooks/views";
+import { useNavigate } from "react-router-dom";
 
 export default function InstallationSystem() {
     useEffect(() => {
@@ -11,9 +12,9 @@ export default function InstallationSystem() {
         setLoading(true)
 
     }, []);
-    const { typelist: products } = useTypes();
+    const { typelist: types } = useTypes();
     const { loading, setLoading} = useLoading();
-
+    const navigate = useNavigate()
     
 
     return (
@@ -31,10 +32,10 @@ export default function InstallationSystem() {
                     <div className="description">
                         <h1>INKA FIXING'S WIDE RANGE OF PRODUCTS, FOCUSED ON QUALITY AND EXCELLENCE, WITH YOU IN ALL ENGINEERING SOLUTIONS.</h1>
                         <div className="Buttons-1">
-                            <button id="bbb">View Products</button>
+                            <button id="bbb" onClick={() => {navigate("/installation-system/products")}}>View Products</button>
                         </div>
                     </div>
-                    <InstallationServices products={products}  />
+                    <InstallationServices types={types}  />
                 </div>
             )}
         </>

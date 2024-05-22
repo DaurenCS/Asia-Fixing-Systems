@@ -18,6 +18,7 @@ import InstallationTechnology from './components/InstallationSystems/Installatio
 import IsolationCertificate from './components/HidroIsolation/IsolationCertificates/Certificates';
 import InstallationCertificate from './components/InstallationSystems/InstallationCertificates/Certificates';
 import Contacts from './components/MainPage/Contacts/Contacts';
+import InstallationProductDetails from './components/InstallationSystems/ProductDetails/ProductDetail';
 function App() {
   return (
     <LoadingProvider>
@@ -30,12 +31,12 @@ function App() {
         
       </Route>
       
-      <Route exact path="/isolation-system" Component={IsolationBody}>
-         <Route exact path="/isolation-system" Component={Isolation}/>
+      <Route exact path = "/isolation-system" Component={IsolationBody}>
+         <Route exact path = "/isolation-system" Component={Isolation}/>
          <Route exact path = "/isolation-system/products" Component={IsolationServices}/>
          <Route exact path = "/isolation-system/products/:id" Component={IsolationProducts}/>
          <Route exact path = "/isolation-system/products/:id/:product_id" Component={IsolationProductDetails}/>
-         <Route exact path= "/isolation-system/certificates" Component={IsolationCertificate}/>
+         <Route exact path = "/isolation-system/certificates" Component={IsolationCertificate}/>
          <Route exact path = "/isolation-system/technology" Component={Technology}/>
       </Route>
 
@@ -43,6 +44,7 @@ function App() {
         <Route exact path="/installation-system" Component={InstallationSystem}/>
         <Route exact path="/installation-system/products" Component={InstallationProducts}/>
         <Route exact path="/installation-system/products/:id" Component={InstallationProducts}/>
+        <Route exact path="/installation-system/product/:product_id" Component={InstallationProductDetails}/>
         <Route exact path= "/installation-system/certificates" Component={InstallationCertificate}/>
         <Route exact path="/installation-system/technology" Component={InstallationTechnology}/>
         

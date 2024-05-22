@@ -4,7 +4,8 @@ import { useLoading } from "../components/Loader/LoadingContext";
 
 const FOODLIST_URL = "/products";
 const TYPELIST_URL = "/types-with-categories";
-const CATEGORY_URL = "/categories/";
+const CATEGORY_URL = "/products/category/";
+const PRODUCTDETAILS_URL = "/"
 
 export const useProducts = () => {
     const { setLoading } = useLoading();
@@ -65,7 +66,7 @@ export const useProductByCategory = (id) => {
             if (id) {
                 setLoading(true);
                 try {
-                    const { data } = await axios.get(`${FOODLIST_URL}/${id}/`, {
+                    const { data } = await axios.get(`${CATEGORY_URL}${id}/`, {
                         headers: { "Content-Type": "application/json" }
                     });
                     setProductList(data);
@@ -119,4 +120,33 @@ export const useProductsOrType = (id) => {
     } else {
         return { productList: allProducts };
     }
+};
+
+
+
+export const useProductDetails = (id) => {
+    const { setLoading } = useLoading();
+    const [productDetail, setProductDetail] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            if (id) {
+                setLoading(true);
+                try {
+                    const { data } = await axios.get(`${FOODLIST_URL}/${id}`, {
+                        headers: { "Content-Type": "application/json" }
+                    });
+                    setProductDetail(data);
+                } catch (error) {
+                    console.error("Error fetching product details:", error);
+                } finally {
+                    setLoading(false);
+                }
+            }
+        };
+
+        fetchData();
+    }, [id, setLoading]);
+
+    return { productDetail };
 };

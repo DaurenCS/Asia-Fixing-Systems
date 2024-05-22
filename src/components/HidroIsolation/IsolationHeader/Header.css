@@ -48,12 +48,8 @@ button{
     fill: #FFFFFF;
     color: black;
     background-color: #FFFFFF00;
-    border-style: solid;
-    border-width: 1px 1px 1px 1px;
-    border-color: black;
-    border-radius: 1000px 1000px 1000px 1000px;
-    padding: 12px 30px 12px 30px;
-    transition: 0.3s;
+    border-style: none;
+    transition: 0.2s;
 
 }
 /* #contacts-3 button:hover{

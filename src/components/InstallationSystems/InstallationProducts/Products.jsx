@@ -1,6 +1,6 @@
 import React from "react";
 import './Products.css';
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useProductsOrType, useTypes} from "../../../hooks/views";
 import { useLoading } from "../../Loader/LoadingContext";
 import Loader from "../../Loader/Loader";
@@ -10,7 +10,7 @@ export default function InstallationProducts() {
     const { typelist: types } = useTypes()
     const { productList } = useProductsOrType(id);
     const { loading } = useLoading();
-
+    const navigate = useNavigate()
     return (
         <>
         {loading ? ( <Loader/> ):
@@ -41,9 +41,16 @@ export default function InstallationProducts() {
                                 ) : (
                                     productList.map(product => (
                                         <div key={product.id} className="installation-product">
-                                            <img src={product.images.name} alt={product.name} />
-                                            {product.name}
+                                            <div>
+                                                <img src={product.images.name} alt={product.name} />
+                                                {product.name}
+                                            </div>
+                                            <div className="icon">
+                                                <button className="button" onClick={()=> (navigate('/installation-system/product/'+product.id))}><span>See the product </span></button>
+                                            </div>
+                                            
                                         </div>
+                                        
                                     ))
                                 )}
                         </div>

@@ -11,6 +11,7 @@
     padding-right: 45%;
     font-family: "Montserrat", sans-serif;
     color: white;
+    margin-bottom: 15%;
 
 }
 image{
@@ -35,3 +36,16 @@ image{
     height: 100%;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.438) 0%, rgba(0, 0, 0, 0) 100%); /* Adjust gradient colors and opacity here */
   }
+.youtube-video{
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+
+}
+.videodesc{
+    height: 85vh;
+    border-radius:  15px 15px 15px 15px;
+    overflow: hidden;
+
+}

@@ -5,6 +5,7 @@ import { useLoading } from "../../Loader/LoadingContext";
 import Loader from '../../Loader/Loader';
 import { useTypes } from "../../../hooks/views";
 import { useNavigate } from "react-router-dom";
+import YouTubeVideo from "../../MainPage/YoutubeVideo";
 
 export default function InstallationSystem() {
     useEffect(() => {
@@ -34,6 +35,10 @@ export default function InstallationSystem() {
                         <div className="Buttons-1">
                             <button id="bbb" onClick={() => {navigate("/installation-system/products")}}>View Products</button>
                         </div>
+                    </div>
+                    <div className="youtube-video">
+                        <h1>Benefits</h1>
+                        <YouTubeVideo videoId="ZdKlDBbCwrE" />
                     </div>
                     <InstallationServices types={types}  />
                 </div>

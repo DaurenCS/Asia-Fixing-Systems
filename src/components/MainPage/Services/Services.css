@@ -1,7 +1,5 @@
 .Services{
     display: flex; 
-    /* padding-left: 15%; */
-    /* padding-right: 15%; */
     gap: 5%;
     justify-content: center;
     max-width:max-content;
@@ -9,12 +7,26 @@
     margin-top:5% ;
 
     margin-bottom:10% ;
-    height: 300%;
+    width: 80%;
+    height: 100%;
+
     
 
 }
+.Block-2 .Services{
+    padding-left: 10%;
+    padding-right: 10%;
+
+    gap: 10%;
+
+}
+.Block-2 .Service{
+    height: 750px;
+    
+}
 img{
     object-fit: cover;
+    object-position: center;
     width: 100%;
     
 }
@@ -29,8 +41,13 @@ img{
     
     font-size: 300%;
 }
+.descriptions span{
+    height: 70px;
+    overflow: hidden;
+}
 
 .descriptions{
+    display: grid;
     padding: 10px;
 }
 .Container-3{

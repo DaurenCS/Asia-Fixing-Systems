@@ -15,7 +15,7 @@ export default function InstallationServices({products}) {
                 <Loader />
             ) : (
                 <div className="Products">
-                    <div>
+                    <div className="installation-products-name">
                         <h1>PRODUCTS</h1>
                     </div>
                     <div className="Services-1">

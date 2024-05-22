@@ -37,6 +37,7 @@ export default function IsolationServices(){
                                         <div className="hidro-product-text">
                                             <h3>{product.name}</h3>
                                             <p>{product.desc}</p>
+                                            <button id="bbb">View Product</button>
                                         </div>
                                     </div>
                                 ))}

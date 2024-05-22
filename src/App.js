@@ -14,6 +14,7 @@ import InstallationSystem from './components/InstallationSystems/MainPage/MainPa
 import IsolationProductDetails from './components/HidroIsolation/IsolationProductDetails/ProductDetails';
 import InstallationProducts from './components/InstallationSystems/InstallationProducts/Products';
 import { LoadingProvider } from './components/Loader/LoadingContext';
+import InstallationTechnology from './components/InstallationSystems/InstallationTechnology/Technology';
 function App() {
   return (
     <LoadingProvider>
@@ -37,6 +38,7 @@ function App() {
         <Route exact path="/installation-system" Component={InstallationSystem}/>
         <Route exact path="/installation-system/products" Component={InstallationProducts}/>
         <Route exact path="/installation-system/products/:id" Component={InstallationProducts}/>
+        <Route exact path="/installation-system/technology" Component={InstallationTechnology}/>
         
         
 

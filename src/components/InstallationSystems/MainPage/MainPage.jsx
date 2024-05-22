@@ -22,6 +22,12 @@ export default function InstallationSystem() {
                 <Loader />
             ) : (
                 <div className="main-page-installation-system">
+                    <div className="video">
+                        <video autoPlay loop muted id="video-container">
+                            <source src="https://video.wixstatic.com/video/11062b_4f14b356c1df4854968cf1cc94ca98c5/1080p/mp4/file.mp4" type="video/mp4" />
+                        </video>
+                        <div class="video-overlay"> </div>
+                    </div>
                     <div className="description">
                         <h1>INKA FIXING'S WIDE RANGE OF PRODUCTS, FOCUSED ON QUALITY AND EXCELLENCE, WITH YOU IN ALL ENGINEERING SOLUTIONS.</h1>
                         <div className="Buttons-1">

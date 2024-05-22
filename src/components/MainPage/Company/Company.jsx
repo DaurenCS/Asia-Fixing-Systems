@@ -21,8 +21,8 @@ export default function Company(){
                         <a href="https://www.instagram.com/kozhakhmet_off/">
                             <img src="https://cdn-icons-png.flaticon.com/128/1400/1400829.png" alt="" />
                         </a>
-                        <a href="">
-                            <img src="https://cdn-icons-png.flaticon.com/128/1051/1051309.png" alt="" />
+                        <a href="https://www.linkedin.com/company/asia-fixing-systems/">
+                            <img src="https://cdn-icons-png.flaticon.com/128/3536/3536569.png" alt="" />
                         </a>
                         <a href="https://wa.me/77476756477">
                             <img src="https://cdn-icons-png.flaticon.com/128/3536/3536479.png" alt="" />

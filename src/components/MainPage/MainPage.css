@@ -1,7 +1,9 @@
 .block-1 {
     height: 450px;
-    background-image:linear-gradient( to right, rgba(255, 255, 255, 0.349), rgba(109, 109, 109, 0.249)),
-    url('https://media-public.canva.com/8vAFw/MAE8kI8vAFw/1/s2.jpg');    
+    background-image:linear-gradient( to right, rgba(255, 255, 255, 0.349), rgba(134, 134, 134, 0.249)),
+    url('https://media-public.canva.com/q6Luw/MAE8kIq6Luw/1/s2.jpg');
+    
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

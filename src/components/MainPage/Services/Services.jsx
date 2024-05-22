@@ -38,7 +38,9 @@ export default function Services() {
                             <div className="descriptions">
                                 <h3>{service.name}</h3>
                                 <span>{service.description}</span>
+                                <button id="bbb">View more</button>
                             </div>
+
                     </div>
                 ) )}
             </div>

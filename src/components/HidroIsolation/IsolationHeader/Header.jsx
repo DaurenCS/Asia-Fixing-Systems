@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import StickyBox from "react-sticky-box";
 import './Header.css';
 import logo from "../../MainPage/Header/logoo.png";
+
 export default function IsolationHeader() {
     
     const navigate = useNavigate()

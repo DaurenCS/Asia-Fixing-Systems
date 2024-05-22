@@ -1,5 +1,5 @@
 .hidroisolation-product-elements{
-    padding-top: 10%;
+    /* padding-top: 10%; */
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
@@ -13,6 +13,9 @@
 .hidroisolation-product-elements .Service img{
     mix-blend-mode:darken;
 
+}
+.hidroisolation-product-elements .Services{
+    width: 100%;
 }
 /* .product{
     flex-grow: 1;

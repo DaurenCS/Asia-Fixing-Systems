@@ -17,3 +17,9 @@
     gap: 5%;
     
 }
+
+@media (max-width: 1024px) {
+    .Contacts{
+        grid-template-columns: 100%;
+    }
+}

@@ -79,3 +79,52 @@
     opacity: 1;
     right: 0;
   }
+
+.installation-service-products-element{
+    margin: 5% 10% 10% 10%;
+
+}
+  .installation-service-products{
+    overflow: hidden;
+    
+  }
+  .installation-products-l{
+    height: 450px;
+    /* background-color: rgba(203, 203, 203, 0.626); */
+    overflow-x:scroll ;
+    display: -webkit-inline-box;
+    gap: 1%;
+    transition: transform 0.3s ease-in-out;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+  }
+
+  
+  .Service-1{
+    width: 32.6%;
+  }
+.scroll-buttons{
+  display: flex;
+  justify-content: space-between;
+}
+  .scroll-button {
+    transform: translateY(-400%);
+    background-color: #dc1e34;
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .scroll-button.left {
+    left: 0;
+  }
+  
+  .scroll-button.right {
+    right: 0;
+  }
+  
+  .scroll-button:hover {
+    background-color: #dc1e34cb;
+  }

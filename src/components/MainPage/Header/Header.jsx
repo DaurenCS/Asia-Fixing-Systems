@@ -2,39 +2,55 @@ import React from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import StickyBox from "react-sticky-box";
 import './Header.css';
-import logo from './logoo.png'
-function Header() {
-    
-    const navigate = useNavigate();
-    
-    
-    return(
-        <StickyBox  offsetTop={0} offsetBottom={10}>
-        <header className="header">
-            <div className="logo">
-                <Link to={"/"}>
-                    <div className="logo-container">
-                        <div className="logo-icon">
-                            <img src={logo} alt="" />
-                            {/* <img src="https://www.kfc.kz/admin/files/3190.svg" alt="" /> */}
-                        </div>
-                    </div>
-                </Link>
-            </div>
+import logo from './logoo.png';
 
-            <div className="user-info">
-                <a href="#main">Main</a>
-                <a href="#services">Products</a>
-                <a href="#company">About us</a>
-                <div className='button-header'>
-                    <a href="#contacts"><button id="bbb"> Contact us</button></a>
+function Header() {
+    const navigate = useNavigate();
+
+    const handleNavigation = (e, targetId) => {
+        e.preventDefault();
+        const currentPath = window.location.pathname;
+        
+        if (currentPath !== "/") {
+            navigate("/", { state: { targetId } });
+        } else {
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                const targetPosition = targetElement.offsetTop - headerHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    };
+
+    return (
+        <StickyBox offsetTop={0} offsetBottom={10}>
+            <header className="header">
+                <div className="logo">
+                    <Link to={"/"}>
+                        <div className="logo-container">
+                            <div className="logo-icon">
+                                <img src={logo} alt="" />
+                            </div>
+                        </div>
+                    </Link>
                 </div>
 
-                
-            </div>
-        </header>
-    </StickyBox>
-    )
+                <div className="user-info">
+                    <a href="#main" onClick={(e) => handleNavigation(e, 'main')}>Main</a>
+                    <a href="#services" onClick={(e) => handleNavigation(e, 'services')}>Products</a>
+                    <a href="#company" onClick={(e) => handleNavigation(e, 'company')}>About us</a>
+                    <div className='button-header'>
+                        <a href="#contacts" onClick={(e) => handleNavigation(e, 'contacts')}><button id="bbb">Contact us</button></a>
+                    </div>
+                </div>
+            </header>
+        </StickyBox>
+    );
 }
 
-export default Header
+export default Header;

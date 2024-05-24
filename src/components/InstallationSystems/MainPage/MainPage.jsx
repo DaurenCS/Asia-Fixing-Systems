@@ -41,6 +41,12 @@ export default function InstallationSystem() {
                         <YouTubeVideo videoId="ZdKlDBbCwrE" />
                     </div>
                     <InstallationServices types={types}  />
+                    <div>
+                        <>ss</>
+                        <>ss</>
+                        <>ss</>
+                        <>ss</>
+                    </div>
                 </div>
             )}
         </>

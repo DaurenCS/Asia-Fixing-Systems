@@ -15,15 +15,7 @@ export default function InstallationTechnology(){
                 </div>
                 <div id="Description" className="descc">
                 <h3><b>WHAT IS CSH TECHNOLOGY</b></h3>
-                <p>CSH technology is based on waterproofing concrete by crystallization and improving its properties to achieve greater durability. <br /> <br />
-
-In general, concrete when exposed to water or humidity undergoes a series of chemical reactions that cause faster deterioration and leaks.<br /> <br />
-
-Thanks to Krystaline’s CSH technology, when concrete comes into contact with water it produces millions of insoluble crystals of calcium silicate hydrates that plug the capillary network. This permanently reduces the permeability of the concrete.<br /> <br />
-
-The greatest virtue of this waterproofing system is that it does not try to ac as a physical barrier against water, it penetrates the concrete and seeks it out, becoming its ally. In other words, it is hydrophilic, not hydrophobic. Water enhances its effectiveness. In addition, Krystaline does not wear out and does not run out, it is a catalyst.<br /> <br />
-
-The hydrophilic reaction also has the advantage of self-repairing shrinkage cracks and any cracks that may appear even years later. In this way we will always have an ultra waterproof concrete with a better appearance and more strength, protecting the entire structure against external chemical agents and giving it greater durability and sustainability.</p>
+                <p></p>
             </div>
             <div className="descc" id="uses-of-csh">
                 <h3><b>USES OF CSH TECHNOLOGY BY KRYSTALINE</b></h3>

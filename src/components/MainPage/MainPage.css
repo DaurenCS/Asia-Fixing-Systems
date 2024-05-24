@@ -40,11 +40,37 @@
     cursor: pointer;
 }
 
-/* .Services{
-    
-    text-align: center;
-    font-size: 300%;
-} */
+@media (max-width: 1024px) {
+    .Description{
+        font-size: 20px;
+        padding-right: 15px;
+    }
+    .descriptions-1{
+        padding-right: 15px;
 
+    }
+    .block-1{
+        height: 300px;
+    }
+    .Block-2 .Service {
+        width: 100%;
+        height: 300px;
+
+
+    }
+    .Services{
+        flex-direction: column;
+    }
+    .team-story{
+    padding-top: 50px;
+    display: flex;
+    padding-left: 10%;
+    padding-right: 15%;
+    align-items: center;
+    flex-direction: column;
+    }
+    
+    
+}
 
 

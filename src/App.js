@@ -10,7 +10,6 @@ import IsolationProducts from './components/HidroIsolation/IsolationProducts/Iso
 import IsolationServices from './components/HidroIsolation/IsolationServices/Services';
 import Technology from './components/HidroIsolation/IsolationTechnology/Technology';
 import InstallationBody from './components/InstallationSystems/InstallationBody/InstallationBody';
-import InstallationSystem from './components/InstallationSystems/MainPage/MainPage';
 import IsolationProductDetails from './components/HidroIsolation/IsolationProductDetails/ProductDetails';
 import InstallationProducts from './components/InstallationSystems/InstallationProducts/Products';
 import { LoadingProvider } from './components/Loader/LoadingContext';
@@ -19,6 +18,7 @@ import IsolationCertificate from './components/HidroIsolation/IsolationCertifica
 import InstallationCertificate from './components/InstallationSystems/InstallationCertificates/Certificates';
 import Contacts from './components/MainPage/Contacts/Contacts';
 import InstallationProductDetails from './components/InstallationSystems/ProductDetails/ProductDetail';
+import InstallationSystem from './components/InstallationSystems/MainPage/MainPage';
 function App() {
   return (
     <LoadingProvider>

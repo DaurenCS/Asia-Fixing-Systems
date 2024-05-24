@@ -10,9 +10,8 @@
     width: 80%;
     height: 100%;
 
-    
-
 }
+
 .Block-2 .Services{
     padding-left: 10%;
     padding-right: 10%;
@@ -69,3 +68,19 @@ img{
     cursor: pointer;
 }
 
+@media (max-width: 1024px ) {
+    .Block-2 .Services {
+        gap: 30px;
+    }
+
+    .Block-2 .Service{
+        display: grid;
+        grid-template-rows: 70% 30%;
+        height: 250px;
+
+    }
+    .service-image{
+        height: 100%;
+    }
+    
+}

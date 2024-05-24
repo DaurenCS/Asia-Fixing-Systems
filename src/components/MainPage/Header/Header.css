@@ -69,3 +69,15 @@
 
   }
 
+  @media (max-width: 1024px) {
+    .header{
+      font-size: 12px;
+    }
+    .button-header button{
+      width: 90%;
+      height: 30px;
+      font-size: 12px;
+    }
+
+  }
+

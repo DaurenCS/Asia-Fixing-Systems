@@ -2,46 +2,49 @@ import React ,{useEffect } from "react";
 import './Isolation.css'
 import Header from "../MainPage/Header/Header";
 import IsolationServices from "./IsolationServices/Services";
-import { useNavigate} from "react-router-dom";
+import { useNavigate, useParams} from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Isolation(){
+    const { t } = useTranslation()
+    const navigate = useNavigate()
+    const {local} = useParams()
+
     const benefits = [
                 {
-                    description: "Waterproofing the concrete without need for membranes."
+                    description: t('benefit-1')
                 },
                 {
-                    description: "Protecting reinforcing steel from corrosion."
+                    description: t('benefit-2')
                 },
                 {
-                    description: "Self-healing the concrete."
+                    description: t('benefit-3')
                 },
                 {
-                    description: "Increasing compressive, tensile and flexural strength."
+                    description: t('benefit-4')
                 },
                 {
-                    description: "Safe for potable water."
+                    description: t('benefit-5')
                 },
                 {
-                    description: "Increasing the durability and sustainability of the structure."
+                    description: t('benefit-6')
                 },
             ]
         
             const main_benegfits = [
                 {
-                    name: "Total Waterproofing",
+                    name: t('benefit-name-1'),
                     url: "https://krystaline.es/wp-content/uploads/2023/10/impermeabilizacion-total_1.png",
-                    desc: "Krystaline is hydrophilic and uses water to enhance the hydration until the concrete is waterproof."
+                    desc: t('benefit-7')
         
                 },
                 {
-                    name: "Catalytic Performance",
+                    name: t('benefit-name-2'),
                     url: "https://krystaline.es/wp-content/uploads/2023/10/catalizador_1.png",
-                    desc: "Krystaline is always present to continue the enhanced hydration whenever water is present."
+                    desc: t('benefit-8')
         
                 }
             ]
-            
-            const navigate = useNavigate()
             useEffect(() => {
                 window.scrollTo(0, 0); 
             }, []);
@@ -57,19 +60,19 @@ export default function Isolation(){
                     </div>
 
                     <div className="description-1">
-                        <h1>ADMIXTURES FOR WATERPROOFING CONCRETE WITH C-S-H TECHNOLOGY</h1>
+                        <h1>{t('isolation-description')}</h1>
                         <div className="Buttons">
-                            <button id="bbb" onClick={() => {navigate("/contacts")}}>Contact Us</button>
+                            <button id="bbb" onClick={() => {navigate(`/${local}/contacts`)}}>{t('button-contacts')}</button>
                     
-                            <button id="bbb" onClick={() => {navigate("/isolation-system/technology")}}>About Technology</button>
+                            <button id="bbb" onClick={() => {navigate(`/${local}/isolation-system/technology`)}}>{t('about_tech')}</button>
                         </div>
                     </div>  
                 </div>
                 <div className="Container-2">
                     <div className="benefits-main">
                         <div className="descripion-benefits">
-                            <h1>BENEFITS</h1>
-                            <h3>Krystaline admixtures:</h3>
+                            <h1>{t('isolation-benefits')}</h1>
+                            <h3>{t('admixture')}</h3>
                         </div>
                         <div className="benefits">
                             {benefits.map((benefit) => (

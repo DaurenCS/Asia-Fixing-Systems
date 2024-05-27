@@ -1,13 +1,16 @@
 import React, { useRef } from "react";
 import './Services.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useTypes } from "../../../hooks/views";
 import { useLoading } from "../../Loader/LoadingContext";
 import Loader from '../../Loader/Loader';
+import { useTranslation } from "react-i18next";
 
 export default function InstallationServices({types}) {
     const navigate = useNavigate();
     const { loading } = useLoading();
+    const {t} = useTranslation()
+    const {local} = useParams()
 
     const scrollContainerRef = useRef(null);
 
@@ -23,7 +26,7 @@ export default function InstallationServices({types}) {
                     
                 <div className="installation-service-products-element">
                 <div className="installation-products-name">
-                         <h1>PRODUCTS</h1>
+                         <h1>{t('isolation-products')}</h1>
                     </div> 
                     <div className="installation-service-products">
                         <div className="installation-products-l" ref={scrollContainerRef}>
@@ -32,14 +35,14 @@ export default function InstallationServices({types}) {
                                 key={product.id}
                                 className="Service-1"
                                 onClick={() => {
-                                navigate("/installation-system/products/" + product.id);
+                                navigate(`/${local}/installation-system/products/${product.id}`);
                                 }}
                             >
                                 <img src={product.description} alt="" />
                                 <div className="descrr">
                                 <h3><b>{product.name}</b></h3>
                                 <div className="icon">
-                                    <button className="button"><span>See the products</span></button>
+                                    <button className="button"><span>{t('see-products')}</span></button>
                                 </div>
                                 </div>
                             </div>

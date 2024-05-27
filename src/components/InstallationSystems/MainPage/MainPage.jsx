@@ -4,10 +4,12 @@ import InstallationServices from "../InstallationServices/Services";
 import { useLoading } from "../../Loader/LoadingContext";
 import Loader from '../../Loader/Loader';
 import { useTypes } from "../../../hooks/views";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import YouTubeVideo from "../../MainPage/YoutubeVideo";
+import { useTranslation } from "react-i18next";
 
 export default function InstallationSystem() {
+    const {local} = useParams() 
     useEffect(() => {
         window.scrollTo(0, 0);
         setLoading(true)
@@ -16,6 +18,7 @@ export default function InstallationSystem() {
     const { typelist: types } = useTypes();
     const { loading, setLoading} = useLoading();
     const navigate = useNavigate()
+    const { t } = useTranslation()
     
 
     return (
@@ -31,21 +34,19 @@ export default function InstallationSystem() {
                         <div class="video-overlay"> </div>
                     </div>
                     <div className="description">
-                        <h1>INKA FIXING'S WIDE RANGE OF PRODUCTS, FOCUSED ON QUALITY AND EXCELLENCE, WITH YOU IN ALL ENGINEERING SOLUTIONS.</h1>
+                        <h1>{t('installation-desc')}</h1>
                         <div className="Buttons-1">
-                            <button id="bbb" onClick={() => {navigate("/installation-system/products")}}>View Products</button>
+                            <button id="bbb" onClick={() => {navigate(`/${local}/installation-system/products`)}}>{t('view-products')}</button>
                         </div>
                     </div>
                     <div className="youtube-video">
-                        <h1>Benefits</h1>
+                        <h1>{t('isolation-benefits')}</h1>
                         <YouTubeVideo videoId="ZdKlDBbCwrE" />
                     </div>
                     <InstallationServices types={types}  />
                     <div>
-                        <>ss</>
-                        <>ss</>
-                        <>ss</>
-                        <>ss</>
+                        <>2024</>
+                        
                     </div>
                 </div>
             )}

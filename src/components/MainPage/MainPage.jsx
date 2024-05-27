@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Header from "./Header/Header";
 import './MainPage.css';
 import Services from "./Services/Services";
 import Company from "./Company/Company";
 import Contacts from "./Contacts/Contacts";
+import { useTranslation } from "react-i18next";
 
 export default function MainPage() {
     const location = useLocation();
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     useEffect(() => {
         if (location.state && location.state.targetId) {
@@ -47,16 +49,18 @@ export default function MainPage() {
         });
     }, []);
 
+    const {local} = useParams()
+
     return (
         <>
             <div id="main" className="Main">
                 <div className="block-1">
                     <div className="descriptions-1">
                         <div className="Description">
-                            <span className="color_11 wixui-rich-text__text">Innovative Solutions for Modern Construction</span> 
+                            <span className="color_11 wixui-rich-text__text">{t('description')}</span> 
                         </div>
-                        <p className="Description-1">A company engaged in the supply of advanced building materials and construction technologies</p>
-                        <button id="bbb" onClick={() => { navigate("/contacts") }}>Contact us</button>
+                        <p className="Description-1">{t('description_1')}</p>
+                        <button id="bbb" onClick={() => { navigate(`/${local}/contacts`) }}>{t('button-contacts')}</button>
                     </div>
                     <div className="description-images">
                         <img src="" alt="" />

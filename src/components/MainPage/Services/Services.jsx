@@ -1,9 +1,10 @@
 import React from "react";
 import './Services.css'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import image from './image.png'
 import immage from './immage.jpg'
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 
 
@@ -25,20 +26,22 @@ const services = [
 
 export default function Services() {
     const navigate = useNavigate()
+    const { t } = useTranslation()
+    const { local } = useParams()
 
     return(
         <div id="services" className="Block-2">
             <h1 className="desc">
-                <span>Products</span>
+                <span>{t('main_products')}</span>
             </h1>
             <div className="Services">
                 {services.map((service)=>(
-                    <div className="Service" onClick={() => {navigate("/"+service.id)}}>
+                    <div className="Service" onClick={() => {navigate(`/${local}/${service.id}`)}}>
                         <img src={service.url} alt="Service Image" className="service-image" />
                             <div className="descriptions">
                                 <h3>{service.name}</h3>
                                 <span>{service.description}</span>
-                                <button id="bbb">View more</button>
+                                <button id="bbb">{t('button-view')}</button>
                             </div>
 
                     </div>

@@ -3,16 +3,21 @@ import { Link, useNavigate } from "react-router-dom";
 import StickyBox from "react-sticky-box";
 import './Header.css';
 import logo from './logoo.png';
+import LanguageSwitcher from '../LanguageChanger';
+import { useTranslation } from 'react-i18next';
 
 function Header() {
     const navigate = useNavigate();
-
+    const { t, i18n } = useTranslation();
+ 
     const handleNavigation = (e, targetId) => {
         e.preventDefault();
         const currentPath = window.location.pathname;
-        
-        if (currentPath !== "/") {
-            navigate("/", { state: { targetId } });
+        const currentLang = i18n.language;
+        const localizedRoot = `/${currentLang}`;
+
+        if (currentPath !== localizedRoot) {
+            navigate(localizedRoot, { state: { targetId } });
         } else {
             const headerHeight = document.querySelector('header').offsetHeight;
             const targetElement = document.getElementById(targetId);
@@ -31,7 +36,7 @@ function Header() {
         <StickyBox offsetTop={0} offsetBottom={10}>
             <header className="header">
                 <div className="logo">
-                    <Link to={"/"}>
+                    <Link to={`/${i18n.language}`}>
                         <div className="logo-container">
                             <div className="logo-icon">
                                 <img src={logo} alt="" />
@@ -41,13 +46,20 @@ function Header() {
                 </div>
 
                 <div className="user-info">
-                    <a href="#main" onClick={(e) => handleNavigation(e, 'main')}>Main</a>
-                    <a href="#services" onClick={(e) => handleNavigation(e, 'services')}>Products</a>
-                    <a href="#company" onClick={(e) => handleNavigation(e, 'company')}>About us</a>
+                    <a href="#main" onClick={(e) => handleNavigation(e, 'main')}>{t('main')}</a>
+                    <a href="#services" onClick={(e) => handleNavigation(e, 'services')}>{t('main_products')}</a>
+                    <a href="#company" onClick={(e) => handleNavigation(e, 'company')}>{t('about-us')}</a>
+                    
                     <div className='button-header'>
-                        <a href="#contacts" onClick={(e) => handleNavigation(e, 'contacts')}><button id="bbb">Contact us</button></a>
+                        <a href="#contacts" onClick={(e) => handleNavigation(e, 'contacts')}><button id="bbb">{t('contact_us')}</button></a>
+
                     </div>
+
                 </div>
+                <LanguageSwitcher />
+
+
+
             </header>
         </StickyBox>
     );

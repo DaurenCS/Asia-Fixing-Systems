@@ -1,15 +1,17 @@
 import React from "react";
 import "./Contacts.css"
+import { useTranslation } from "react-i18next";
 export default function Contacts(){
 
+    const { t } = useTranslation()
     return(
         <div id="contacts" className="Contacts">
             
             <div className="contact-description">
                 <h1 >
-                    <span>Our Contacts</span>
+                    <span>{t('contact-description')}</span>
                 </h1>
-                <p>Thank you for your interest in Asia Fixing System. We are a trading company that specializes in providing advanced building materials and construction technologies. Whether you have questions about our products or services, or would like to discuss a specific project, we are here to help. Please feel free to contact us by phone, email, or by filling out our contact form below. We will get back to you as soon as possible.</p>
+                <p>{t('contact-text')}</p>
                 
                 <div className="contact-details">
 
@@ -23,7 +25,7 @@ export default function Contacts(){
                 </div>
                 <div className="contacts-details">
                     <img src="https://cdn-icons-png.flaticon.com/512/684/684850.png" alt="" />
-                    <h3><address>Almaty, Kazakhstan</address></h3>
+                    <h3><address>{t('contact-address')}</address></h3>
                 </div>
                    
                  </div>

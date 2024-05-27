@@ -9,3 +9,10 @@
     background-color: #dc1e34 ;
     color: white;
 } */
+.contacts-installation{
+    display: grid;
+    grid-template-columns: 90% 40%;
+}
+.contacts-installation button{
+
+}

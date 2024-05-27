@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate, useParams } from 'react-router-dom';
 import MainBody from './components/MainPage/MainBody/MainBody';
 import Company from './components/MainPage/Company/Company';
 import MainPage from './components/MainPage/MainPage';
-import Isolation from './components/HidroIsolation/Isolation'
+import Isolation from './components/HidroIsolation/Isolation';
 import IsolationBody from './components/HidroIsolation/IsolationBody/IsolationBody';
 import IsolationProducts from './components/HidroIsolation/IsolationProducts/IsolationProducts';
 import IsolationServices from './components/HidroIsolation/IsolationServices/Services';
@@ -19,40 +19,59 @@ import InstallationCertificate from './components/InstallationSystems/Installati
 import Contacts from './components/MainPage/Contacts/Contacts';
 import InstallationProductDetails from './components/InstallationSystems/ProductDetails/ProductDetail';
 import InstallationSystem from './components/InstallationSystems/MainPage/MainPage';
+import { useTranslation } from 'react-i18next';
+import './i18n';
+
+const LanguageWrapper = ({ children }) => {
+  const { i18n } = useTranslation();
+  const { local } = useParams();
+
+  React.useEffect(() => {
+    const supportedLanguages = ['en', 'ru'];
+    if (local && i18n.language !== local) {
+      if (supportedLanguages.includes(local)) {
+        i18n.changeLanguage(local);
+      } else {
+        i18n.changeLanguage('en');
+        window.location.replace('/en');
+      }
+    }
+  }, [local, i18n]);
+
+  return children;
+};
+
 function App() {
   return (
     <LoadingProvider>
-    <Routes>
-      <Route path="*" element={<Navigate from="*" to="/" />} />
-      <Route exact path="/" Component={MainBody}>
-        <Route exact path="/" Component={MainPage} />
-        <Route exact path="/about" Component={Company} />
-        <Route exact path="/contacts" Component={Contacts} />
+      <Routes>
+        <Route path="/" element={<Navigate to="/en" />} />
+        <Route path="/:local" element={<LanguageWrapper><MainBody /></LanguageWrapper>}>
+          <Route index element={<MainPage />} />
+          <Route path="/:local/about" element={<Company />} />
+          <Route path="/:local/contacts" element={<Contacts />} />
+        </Route>
         
-      </Route>
-      
-      <Route exact path = "/isolation-system" Component={IsolationBody}>
-         <Route exact path = "/isolation-system" Component={Isolation}/>
-         <Route exact path = "/isolation-system/products" Component={IsolationServices}/>
-         <Route exact path = "/isolation-system/products/:id" Component={IsolationProducts}/>
-         <Route exact path = "/isolation-system/products/:id/:product_id" Component={IsolationProductDetails}/>
-         <Route exact path = "/isolation-system/certificates" Component={IsolationCertificate}/>
-         <Route exact path = "/isolation-system/technology" Component={Technology}/>
-      </Route>
+        <Route path="/:local/isolation-system" element={<IsolationBody />}>
+          <Route index element={<Isolation />} />
+          <Route path="products" element={<IsolationServices />} />
+          <Route path="products/:id" element={<IsolationProducts />} />
+          <Route path="products/:id/:product_id" element={<IsolationProductDetails />} />
+          <Route path="certificates" element={<IsolationCertificate />} />
+          <Route path="technology" element={<Technology />} />
+        </Route>
 
-      <Route exact path="/installation-system" Component={InstallationBody}> 
-        <Route exact path="/installation-system" Component={InstallationSystem}/>
-        <Route exact path="/installation-system/products" Component={InstallationProducts}/>
-        <Route exact path="/installation-system/products/:id" Component={InstallationProducts}/>
-        <Route exact path="/installation-system/product/:product_id" Component={InstallationProductDetails}/>
-        <Route exact path= "/installation-system/certificates" Component={InstallationCertificate}/>
-        <Route exact path="/installation-system/technology" Component={InstallationTechnology}/>
-        
-        
+        <Route path="/:local/installation-system" element={<InstallationBody />}>
+          <Route index element={<InstallationSystem />} />
+          <Route path="products" element={<InstallationProducts />} />
+          <Route path="products/:id" element={<InstallationProducts />} />
+          <Route path="product/:product_id" element={<InstallationProductDetails />} />
+          <Route path="certificates" element={<InstallationCertificate />} />
+          <Route path="technology" element={<InstallationTechnology />} />
+        </Route>
 
-      </Route>
-
-    </Routes>
+        <Route path="*" element={<Navigate to="/en" />} />
+      </Routes>
     </LoadingProvider>
   );
 }

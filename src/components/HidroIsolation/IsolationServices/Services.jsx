@@ -1,8 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import './Services.css'
+import { useTranslation } from "react-i18next";
 export default function IsolationServices(){
     const navigate = useNavigate()
+    const { t } = useTranslation()
+    const { local } = useParams()
     const products = [
         {
             id: "concrete-admixtures",
@@ -23,21 +26,21 @@ export default function IsolationServices(){
     return(
         <div className="Products">
                         <div className="descripion-benefits">
-                            <h1>PRODUCTS</h1>
+                            <h1>{t('isolation-products')}</h1>
                         </div>
                            <div className="hidro-products-detail">
                                 {products.map((product) => (
                                     <div
                                         className="hidro-product"
                                         onClick={() => {
-                                            navigate("/isolation-system/products/" + product.id);
+                                            navigate(`/${local}/isolation-system/products/${product.id}` );
                                         }}
                                         style={{ backgroundImage: `url(${product.url})` }}
                                     >
                                         <div className="hidro-product-text">
                                             <h3>{product.name}</h3>
                                             <p>{product.desc}</p>
-                                            <button id="bbb">View Product</button>
+                                            <button id="bbb">{t('view-products')}</button>
                                         </div>
                                     </div>
                                 ))}

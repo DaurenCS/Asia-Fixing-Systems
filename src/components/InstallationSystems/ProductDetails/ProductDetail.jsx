@@ -3,12 +3,16 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useProductDetails } from "../../../hooks/views";
 import Loader from "../../Loader/Loader";
 import { useLoading } from "../../Loader/LoadingContext";
+import { useTranslation } from "react-i18next";
 
 export default function InstallationProductDetails() {
     const { product_id } = useParams();
     const navigate = useNavigate();
     const { productDetail: product } = useProductDetails(product_id);
     const { loading } = useLoading();
+    const { local } = useParams()
+
+    const { t } = useTranslation()
 
     if (loading) {
         return <Loader />;
@@ -30,8 +34,8 @@ export default function InstallationProductDetails() {
                         {sentence}
                     </p>
                 ))}
-                <button id="bbb" onClick={() => navigate("/contacts")}>
-                    Request More Information
+                <button id="bbb" onClick={() => navigate(`${local}/contacts`)}>
+                    {t('request')}
                 </button>
             </div>
             <div className="image">

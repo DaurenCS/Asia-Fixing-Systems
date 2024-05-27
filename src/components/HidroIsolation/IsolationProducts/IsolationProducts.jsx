@@ -26,10 +26,11 @@ export default function IsolationProducts(){
     ]
 
     const navigate = useNavigate()
-    
     const {id} = useParams();
+    const { local } = useParams()
 
     const url = id
+
 
     return(
         <>
@@ -40,7 +41,7 @@ export default function IsolationProducts(){
                 <div className="Services">
                     {products.map((product) => (
                         <div className="Service" onClick={() => {
-                            navigate("/isolation-system/products/"+{url}+"/"+ product.name);
+                            navigate(`/${local}/isolation-system/products/${url}/${product.name}`);
                         }} >
                             <img src={product.url} alt="" />
                             <h2><b> {product.name}</b></h2>

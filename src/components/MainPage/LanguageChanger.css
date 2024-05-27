@@ -1,0 +1,62 @@
+.language-switcher {
+    position: relative;
+    padding-left: 25%;
+    display: flex;
+    align-items: center;
+
+}
+
+.language-button {
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.language-button:hover {
+    background-color: #b3b3b3;
+}
+
+.language-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.language-button:active {
+    transform: scale(0.95);
+}
+
+.language-dropdown {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.language-dropdown a {
+    color: #333333;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.language-dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.language-switcher.show .language-dropdown {
+    display: block;
+}

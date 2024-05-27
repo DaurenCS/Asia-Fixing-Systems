@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useProductsOrType, useTypes} from "../../../hooks/views";
 import { useLoading } from "../../Loader/LoadingContext";
 import Loader from "../../Loader/Loader";
+import { useTranslation } from "react-i18next";
 
 export default function InstallationProducts() {
     const { id } = useParams();
@@ -11,16 +12,18 @@ export default function InstallationProducts() {
     const { productList } = useProductsOrType(id);
     const { loading } = useLoading();
     const navigate = useNavigate()
+    const {local} = useParams()
+    const { t } =useTranslation()
     return (
         <>
         {loading ? ( <Loader/> ):
         (<div className="installation-products-elements">
                     <div className="side-bar">
-                    <h3>Categories</h3>
+                    <h3>{t('categories')}</h3>
                         {types.map( type => (   
                             <div className="type">
                                 <div className="type-name" onClick={() => {
-                                    window.location.href = "/installation-system/products/" + type.id; }} >
+                                    window.location.href = `/${local}/installation-system/products/${type.id}`; }} >
                                     <h4> - {type.name}</h4>
                                 </div>
                                 <div className="categories">
@@ -33,11 +36,11 @@ export default function InstallationProducts() {
                     </div>                
                     <div className="installation-products">
                         <div className="installation-description">
-                            <h1>Products {id}</h1>
+                            <h1>{t('main_products')} {id}</h1>
                         </div>
                         <div className="installation-products-list">
                             {productList.length === 0 ? (
-                                    <h1>NOT FOUND</h1>
+                                    <h1>{t('not-found')}</h1>
                                 ) : (
                                     productList.map(product => (
                                         <div key={product.id} className="installation-product">
@@ -46,7 +49,7 @@ export default function InstallationProducts() {
                                                 {product.name}
                                             </div>
                                             <div className="icon">
-                                                <button className="button" onClick={()=> (navigate('/installation-system/product/'+product.id))}><span>See the product </span></button>
+                                                <button className="button" onClick={()=> (navigate(`/${local}/installation-system/product/${product.id}`))}><span>{t('see-product')}</span></button>
                                             </div>
                                             
                                         </div>

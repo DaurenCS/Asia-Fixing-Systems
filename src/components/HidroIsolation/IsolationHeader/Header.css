@@ -52,6 +52,10 @@ button{
     transition: 0.2s;
 
 }
+.contacts{
+    display: grid;
+    grid-template-columns: 90% 40%;
+}
 /* #contacts-3 button:hover{
     background-color: #5BBDB3;
     border-color: #5BBDB3;

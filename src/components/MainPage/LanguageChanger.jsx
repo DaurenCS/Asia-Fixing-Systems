@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import './LanguageChanger.css';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 const LanguageSwitcher = () => {
     const { i18n } = useTranslation();
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const navigate = useNavigate();
 
     const handleLanguageChange = (lang) => {
         i18n.changeLanguage(lang);
+        window.location.href = `/${lang}`;
         setDropdownOpen(false);
     };
 

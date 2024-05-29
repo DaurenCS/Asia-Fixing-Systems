@@ -15,6 +15,13 @@
 
 }
 .hidroisolation-product-elements .Services{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 100%;
+    
+}
+
+.hidroisolation-product-elements .Service{
     width: 100%;
 }
 /* .product{

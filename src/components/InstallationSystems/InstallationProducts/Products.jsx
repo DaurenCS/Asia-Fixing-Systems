@@ -1,6 +1,6 @@
 import React from "react";
 import './Products.css';
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useProductsOrType, useTypes} from "../../../hooks/views";
 import { useLoading } from "../../Loader/LoadingContext";
 import Loader from "../../Loader/Loader";
@@ -8,18 +8,23 @@ import { useTranslation } from "react-i18next";
 
 export default function InstallationProducts() {
     const { id } = useParams();
-    const { typelist: types } = useTypes()
-    const { productList } = useProductsOrType(id);
+    const {local} = useParams()
+    const locate = useLocation()
+    const type = locate.state || []
+
     const { loading } = useLoading();
     const navigate = useNavigate()
-    const {local} = useParams()
-    const { t } =useTranslation()
+    const { productList } = useProductsOrType(id, local);
+    const { typelist: types } = useTypes(local)
+
+
+    const { t } = useTranslation()
     return (
         <>
         {loading ? ( <Loader/> ):
         (<div className="installation-products-elements">
                     <div className="side-bar">
-                    <h3>{t('categories')}</h3>
+                    <h3>{t('categories')} </h3>
                         {types.map( type => (   
                             <div className="type">
                                 <div className="type-name" onClick={() => {
@@ -27,7 +32,7 @@ export default function InstallationProducts() {
                                     <h4> - {type.name}</h4>
                                 </div>
                                 <div className="categories">
-                                    <WithCategories key={type.id} type={type.categories} />
+                                    {/* <WithCategories key={type.id} type={type.categories} /> */}
                                 </div>
                             </div>
                         )
@@ -36,7 +41,7 @@ export default function InstallationProducts() {
                     </div>                
                     <div className="installation-products">
                         <div className="installation-description">
-                            <h1>{t('main_products')} {id}</h1>
+                            <h1>{t('main_products')} {type.name}</h1>
                         </div>
                         <div className="installation-products-list">
                             {productList.length === 0 ? (
@@ -46,10 +51,12 @@ export default function InstallationProducts() {
                                         <div key={product.id} className="installation-product">
                                             <div>
                                                 <img src={product.images.name} alt={product.name} />
+                                                {/* <img src={product.vendor_code} alt={product.name} /> */}
+
                                                 {product.name}
                                             </div>
                                             <div className="icon">
-                                                <button className="button" onClick={()=> (navigate(`/${local}/installation-system/product/${product.id}`))}><span>{t('see-product')}</span></button>
+                                                <button className="button" onClick={()=> (navigate(`/${local}/installation-system/product/${product.id}`, {state : product}))}><span>{t('see-product')}</span></button>
                                             </div>
                                             
                                         </div>

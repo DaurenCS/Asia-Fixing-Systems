@@ -6,11 +6,17 @@ import Services from "./Services/Services";
 import Company from "./Company/Company";
 import Contacts from "./Contacts/Contacts";
 import { useTranslation } from "react-i18next";
+import { useLoading } from "../Loader/LoadingContext";
+import Loader from "../Loader/Loader";
+import { useTechnologies } from "../../hooks/views";
 
 export default function MainPage() {
     const location = useLocation();
+    const {local} = useParams()
     const navigate = useNavigate();
     const { t } = useTranslation();
+    const { loading, setLoading} = useLoading();
+    const {productList: services} = useTechnologies(local)
 
     useEffect(() => {
         if (location.state && location.state.targetId) {
@@ -49,27 +55,31 @@ export default function MainPage() {
         });
     }, []);
 
-    const {local} = useParams()
 
     return (
         <>
-            <div id="main" className="Main">
-                <div className="block-1">
-                    <div className="descriptions-1">
-                        <div className="Description">
-                            <span className="color_11 wixui-rich-text__text">{t('description')}</span> 
+            {loading ? (
+                <Loader/>
+            ):(
+                <div id="main" className="Main">
+                    <div className="block-1">
+                        <div className="descriptions-1">
+                            <div className="Description">
+                                <span className="color_11 wixui-rich-text__text">{t('description')}</span> 
+                            </div>
+                            <p className="Description-1">{t('description_1')}</p>
+                            <button id="bbb" onClick={() => { navigate(`/${local}/contacts`) }}>{t('button-contacts')}</button>
                         </div>
-                        <p className="Description-1">{t('description_1')}</p>
-                        <button id="bbb" onClick={() => { navigate(`/${local}/contacts`) }}>{t('button-contacts')}</button>
+                        <div className="description-images">
+                            <img src="" alt="" />
+                        </div>
                     </div>
-                    <div className="description-images">
-                        <img src="" alt="" />
-                    </div>
+                    <Services services={services} />
+                    <Company />
+                    <Contacts />
                 </div>
-                <Services />
-                <Company />
-                <Contacts />
-            </div>
+            )}
+           
         </>
     );
 }

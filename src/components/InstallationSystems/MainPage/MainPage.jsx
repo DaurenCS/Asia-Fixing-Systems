@@ -15,7 +15,7 @@ export default function InstallationSystem() {
         setLoading(true)
 
     }, []);
-    const { typelist: types } = useTypes();
+    const { typelist: types } = useTypes(local);
     const { loading, setLoading} = useLoading();
     const navigate = useNavigate()
     const { t } = useTranslation()

@@ -35,7 +35,7 @@ export default function InstallationServices({types}) {
                                 key={product.id}
                                 className="Service-1"
                                 onClick={() => {
-                                navigate(`/${local}/installation-system/products/${product.id}`);
+                                navigate(`/${local}/installation-system/products/${product.id}`, {state: product});
                                 }}
                             >
                                 <img src={product.description} alt="" />

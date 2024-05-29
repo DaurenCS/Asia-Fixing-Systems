@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useProductDetails } from "../../../hooks/views";
 import Loader from "../../Loader/Loader";
 import { useLoading } from "../../Loader/LoadingContext";
@@ -8,7 +8,8 @@ import { useTranslation } from "react-i18next";
 export default function InstallationProductDetails() {
     const { product_id } = useParams();
     const navigate = useNavigate();
-    const { productDetail: product } = useProductDetails(product_id);
+    const locate = useLocation()
+    const product = locate.state
     const { loading } = useLoading();
     const { local } = useParams()
 
@@ -18,8 +19,8 @@ export default function InstallationProductDetails() {
         return <Loader />;
     }
 
-    if (!product || !product.description) {
-        return <p>No product details found.</p>; // Handle case where product or description is undefined
+    if (!product.description) {
+        return null; // Return null or handle the case where description is undefined
     }
 
     const sentences = product.description.split(/\.\s+/);
@@ -34,7 +35,7 @@ export default function InstallationProductDetails() {
                         {sentence}
                     </p>
                 ))}
-                <button id="bbb" onClick={() => navigate(`${local}/contacts`)}>
+                <button id="bbb" onClick={() => navigate(`/${local}/contacts`)}>
                     {t('request')}
                 </button>
             </div>

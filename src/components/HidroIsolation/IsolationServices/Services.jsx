@@ -1,30 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import './Services.css'
 import { useTranslation } from "react-i18next";
-export default function IsolationServices(){
+import Loader from "../../Loader/Loader";
+
+export default function IsolationServices({ products: initialProducts }){
     const navigate = useNavigate()
     const { t } = useTranslation()
     const { local } = useParams()
-    const products = [
-        {
-            id: "concrete-admixtures",
-            name: "CONCRETE ADMIXTURES",
-            url: "https://krystaline.es/wp-content/uploads/2023/11/krystaline-aditivosparahormigon-700x700-1.jpg",
-            desc: "Internal waterproofing for the entire life of the concrete."
+    const [products, setProducts] = useState(initialProducts || []);
+    const [loading, setLoading] = useState(!initialProducts);
 
-        },
-        {
-            id: "concrete-repair",  
-            name: "CONCRETE REPAIR",
-            url: "https://krystaline.es/wp-content/uploads/2023/11/krystaline-morterosparahormigon-700x700-1.jpg",
-            desc: "Surface applied protection and repair for the life of the concrete."
-
+    useEffect(() => {
+        if (!initialProducts) {
+            async function fetchProducts() {
+                setLoading(true);
+                try {
+                    const response = await fetch(`http://86.107.45.160:8000/products/isolation/categories?local=${local}`);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    setProducts(data);
+                } catch (error) {
+                    console.error("Error fetching products:", error);
+                } finally {
+                    setLoading(false);
+                }
+            }
+            fetchProducts();
         }
-    ]
-
+    }, [initialProducts, local]);
+    
     return(
-        <div className="Products">
+        <>
+        {loading ? 
+        (<Loader/>):
+        (
+            <div className="Products">
                         <div className="descripion-benefits">
                             <h1>{t('isolation-products')}</h1>
                         </div>
@@ -33,18 +46,22 @@ export default function IsolationServices(){
                                     <div
                                         className="hidro-product"
                                         onClick={() => {
-                                            navigate(`/${local}/isolation-system/products/${product.id}` );
+                                            navigate(`/${local}/isolation-system/products/${product.id}`, {state: product } );
                                         }}
-                                        style={{ backgroundImage: `url(${product.url})` }}
+                                        style={{ backgroundImage: `url(${product.image})` }}
                                     >
                                         <div className="hidro-product-text">
                                             <h3>{product.name}</h3>
-                                            <p>{product.desc}</p>
+                                            <p>{product.description}</p>
                                             <button id="bbb">{t('view-products')}</button>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
+        )
+        }
+        </>
+        
     )
 }

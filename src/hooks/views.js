@@ -6,8 +6,10 @@ const FOODLIST_URL = "/products";
 const TYPELIST_URL = "/types-with-categories";
 const CATEGORY_URL = "/products/category/";
 const PRODUCTDETAILS_URL = "/"
+const TECHNOLOGIES_URL = "/technologies"
+const HIDROCATEGORIES_URL = "/products/isolation/categories"
 
-export const useProducts = () => {
+export const useProducts = (local) => {
     const { setLoading } = useLoading();
     const [productList, setProductList] = useState([]);
 
@@ -15,7 +17,7 @@ export const useProducts = () => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const { data } = await axios.get(FOODLIST_URL, {
+                const { data } = await axios.get(`/installation${FOODLIST_URL}?local=${local}`, {
                     headers: { "Content-Type": "application/json" }
                 });
                 setProductList(data);
@@ -32,7 +34,7 @@ export const useProducts = () => {
     return { productList };
 };
 
-export const useTypes = () => {
+export const useTypes = (local) => {
     const { setLoading } = useLoading();
     const [typelist, setTypelist] = useState([]);
 
@@ -40,7 +42,7 @@ export const useTypes = () => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const { data } = await axios.get(TYPELIST_URL, {
+                const { data } = await axios.get(`${TYPELIST_URL}?local=${local}`, {
                     headers: { "Content-Type": "application/json" }
                 });
                 setTypelist(data);
@@ -111,9 +113,9 @@ export const useProductByType = (id) => {
     return { productList };
 };
 
-export const useProductsOrType = (id) => {
+export const useProductsOrType = (id, local) => {
     const { productList: categoryProducts } = useProductByType(id);
-    const { productList: allProducts } = useProducts();
+    const { productList: allProducts } = useProducts(local);
 
     if (id) {
         return { productList: categoryProducts };
@@ -150,3 +152,79 @@ export const useProductDetails = (id) => {
 
     return { productDetail };
 };
+
+export const useTechnologies = (local) => {
+    const { setLoading } = useLoading();
+    const [productList, setProductList] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setLoading(true);
+            try {
+                const { data } = await axios.get(`${TECHNOLOGIES_URL}?local=${local}`, {
+                    headers: { "Content-Type": "application/json" }
+                });
+                setProductList(data);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        
+        fetchData();
+    }, [setLoading]);
+
+    return { productList };
+};
+
+export const useHidroCategories = (local) => {
+    const { setLoading } = useLoading();
+    const [productList, setProductList] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setLoading(true);
+            try {
+                const { data } = await axios.get(`${HIDROCATEGORIES_URL}?local=${local}`, {
+                    headers: { "Content-Type": "application/json" }
+                });
+                setProductList(data);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        
+        fetchData();
+    }, [setLoading]);
+
+    return { productList };
+};
+
+export const useProductsByCategory = ( id) => {
+    const { setLoading } = useLoading();
+    const [productList, setProductList] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setLoading(true);
+            try {
+                const { data } = await axios.get(`${CATEGORY_URL}/${id}`, {
+                    headers: { "Content-Type": "application/json" }
+                });
+                setProductList(data);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        
+        fetchData();
+    }, [setLoading]);
+
+    return { productList };
+
+}

@@ -12,7 +12,7 @@
     padding-left: 10%;
     text-align:left;
     display: flex;
-    padding-top:15%;
+    padding-top:10%;
 
 }
 
@@ -25,6 +25,9 @@
     font-size: 50px;
     color: black;
 
+}
+.Description-1{
+    padding-right: 45%;
 }
 #bbb{
     border-radius: 6px 6px 6px 6px;

@@ -1,0 +1,32 @@
+
+.certificate{
+    display: grid;
+    row-gap: 5%;
+    
+}
+
+
+.certificate-desc{
+    background-color: #f8f8f8;
+    transition: 0.3s;
+    padding-left: 3%;
+    padding-right: 3%;
+
+    display: grid;
+    grid-template-columns: 10% 85% 10%;
+    font-size: 60%;
+    align-items: center;
+}
+
+.certificate-desc:hover{
+    background-color: #cdcdcd;
+    cursor: pointer;
+}
+
+.pdf{
+    width: 50%;
+}
+.download{
+    width: 30%;
+}
+

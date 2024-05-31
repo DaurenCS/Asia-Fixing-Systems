@@ -562,6 +562,262 @@ const installation_categories = [
 
 ]
 
+const installationProduct = [
+  {
+    "name": "Std. Pipe Clamp with Rubber Profile",
+    "description": "Size Range 1/8” through 2” Material Carbon Steel EPDM Rubber Lining for noise reduction level up to 15dB acc. to DIN4109, vibration reduction and partial compensation of thermal expansion. Service Used for mounting of pipes to the walls (vertical/horizontal), ceilings and floors. Installation Easy and safe assembly through Philips combi side screws. Side screws are protected against loss during assembly with the help of plastic washers.",
+    "local": "en",
+    "id": 22,
+    "vendor_code": "IS1-1",
+    "price": 1,
+    "category": {
+      "name": "Pipe Hangers & Supports",
+      "description": "string",
+      "local": "en",
+      "id": 5,
+      "type_id": 3,
+      "image": "string"
+    },
+    "images": {
+      "name": "https://inkafixing.com/Uploads/images/Products/IS1-1/Std_-Pipe-Clamp-with-Rubber-Profile.jpg",
+      "product_id": 22,
+      "vendor_code": "IS1-1"
+    }
+  },
+  {
+    "name": "Std. Pipe Clamp Without Rubber Profile",
+    "description": "Size Range 1/8” through 2” Material Carbon Steel EPDM Rubber Lining for noise reduction level up to 15dB acc. to DIN4109, vibration reduction and partial compensation of thermal expansion. Service Used for mounting of pipes to the walls (vertical/horizontal), ceilings and floors. Installation Easy and safe assembly through Philips combi side screws. Side screws are protected against loss during assembly with the help of plastic washers. Ordering Specify pipe size, figure number and name.",
+    "local": "en",
+    "id": 23,
+    "vendor_code": "IS1-2",
+    "price": 1,
+    "category": {
+      "name": "Pipe Hangers & Supports",
+      "description": "string",
+      "local": "en",
+      "id": 5,
+      "type_id": 3,
+      "image": "string"
+    },
+    "images": {
+      "name": "https://inkafixing.com/Uploads/images/Products/IS1-2/Std_-Pipe-Clamp-Without-Rubber-Profile.jpg",
+      "product_id": 23,
+      "vendor_code": "IS1-2"
+    }
+  },
+  {
+    "name": "Std. Pipe Clamp Without Rubber Profile (Welded Wood Screw)",
+    "description": "Size Range 1/8” through 3” Material Carbon Steel Service Used for mounting of pipes to the walls (vertical/horizontal), ceilings and floors. Nylon plug should be used for fixing. Installation Easy and safe assembly through Philips combi side screws. Side screws are protected against loss during assembly with the help of plastic washers.",
+    "local": "en",
+    "id": 25,
+    "vendor_code": "IS1-6",
+    "price": 1,
+    "category": {
+      "name": "Pipe Hangers & Supports",
+      "description": "string",
+      "local": "en",
+      "id": 5,
+      "type_id": 3,
+      "image": "string"
+    },
+    "images": {
+      "name": "https://inkafixing.com/Uploads/images/Products/IS1-6/Std_-Pipe-Clamp-Without-Rubber-Profile-(Welded-Wood-Screw).jpg",
+      "product_id": 25,
+      "vendor_code": "IS1-6"
+    }
+  },
+  {
+    "name": "IPL3030 L Profile",
+    "description": "Material & Finish Pre-galvanized Material: S250GD (1,0242) Pre-galvanized acc. to DIN EN 10346 Coating designation: Z100 Hot Dipped Galvanized Material: S235JR (1.0038) Carbon steel acc. to DIN EN 10025 Finish: Hot Dipped Galvanized (HDG) acc. to ASTM A153/153M - ASTMA 123/123M EN ISO 1461/EN ISO 1084",
+    "local": "en",
+    "id": 28,
+    "vendor_code": "SSL-1",
+    "price": 1,
+    "category": {
+      "name": "L Profile Systems",
+      "description": "string",
+      "local": "en",
+      "id": 24,
+      "type_id": 5,
+      "image": "string"
+    },
+    "images": {
+      "name": "https://inkafixing.com/Uploads/images/Products/SSL-1/IPL3030-L-Profile.jpg",
+      "product_id": 28,
+      "vendor_code": "SSL-1"
+    }
+  },
+  {
+    "name": "Std. Pipe Clamp With Rubber Profile (Welded Wood Screw)",
+    "description": "Size Range 1/8” through 2 1/2” Material Carbon Steel EPDM Rubber Lining for noise reduction level up to 15dB acc. to DIN4109, vibration reduction and partial compensation of thermal expansion. Service Used for mounting of pipes to the walls (vertical/horizontal), ceilings and floors. Nylon plug should be used for fixing. Installation Easy and safe assembly through Philips combi side screws. Side screws are protected against loss during assembly with the help of plastic washers.",
+    "local": "en",
+    "id": 24,
+    "vendor_code": "IS1-5",
+    "price": 1,
+    "category": {
+      "name": "Pipe Hangers & Supports",
+      "description": "string",
+      "local": "en",
+      "id": 5,
+      "type_id": 3,
+      "image": "string"
+    },
+    "images": {
+      "name": "https://inkafixing.com/Uploads/images/Products/IS1-5/Std_-Pipe-Clamp-With-Rubber-Profile-(Welded-Wood-Screw).jpg",
+      "product_id": 24,
+      "vendor_code": "IS1-5"
+    }
+  },
+  {
+    "name": "IPG4121 - G Profile",
+    "description": "Material & Finish Pre-galvanized Material S250GD (1,0242) Pre-galvanized acc to DIN EN 10346 Hot Dipped Galvanized Material: S235JR (1,0038) Carbon steel acc to DIN EN 10025 Finish: Hot Dipped Galvanized (HDG) acc. to ASTM A153/153M - ASTM A123/123M - EN ISO 1461/EN ISO 10684",
+    "local": "en",
+    "id": 26,
+    "vendor_code": "SSG-1",
+    "price": 1,
+    "category": {
+      "name": "G Profiles, Brackets & Accessories",
+      "description": "string",
+      "local": "en",
+      "id": 22,
+      "type_id": 5,
+      "image": "string"
+    },
+    "images": {
+      "name": "https://inkafixing.com/Uploads/images/Products/SSG-1/IPG4121---G-Profile.jpg",
+      "product_id": 26,
+      "vendor_code": "SSG-1"
+    }
+  },
+  {
+    "name": "IPC2718 C Profile",
+    "description": "Material & Finish Pre-galvanized Material S250GD (1,0242) Pre-galvanized acc. to DIN EN 10346 Coating designation: Z275 Hot Dipped Galvanized Material: DC01 Carbon steel acc. to DIN EN 10130 Finish Hot Dipped Galvanized (HDG) acc. to ASTM A153/153M - ASTM A123/123M EN ISO 1461/EN ISO 10684",
+    "local": "en",
+    "id": 27,
+    "vendor_code": "SSC-1",
+    "price": 1,
+    "category": {
+      "name": "C Profile Systems",
+      "description": "string",
+      "local": "en",
+      "id": 23,
+      "type_id": 5,
+      "image": "string"
+    },
+    "images": {
+      "name": "https://inkafixing.com/Uploads/images/Products/SSC-1/IPC2718-C-Profile.jpg",
+      "product_id": 27,
+      "vendor_code": "SSC-1"
+    }
+  },
+  {
+    "name": "IFFL Ventilation Flange Profile",
+    "description": "20 mm & 30 mm Material & Finish Pre-galvanized Material: DX51D Coating designation: Z200 Service Flange profiles cut in to desired lenghts and assembledias frame use for air ventilation system assembly. Flange is used produced in our facility by rollforming method Galvanized sheet is used as raw materials.",
+    "local": "en",
+    "id": 29,
+    "vendor_code": "VS-1",
+    "price": 1,
+    "category": {
+      "name": "Ventilation Systems",
+      "description": "string",
+      "local": "en",
+      "id": 31,
+      "type_id": 7,
+      "image": "string"
+    },
+    "images": {
+      "name": "https://inkafixing.com/Uploads/images/Products/VS-1/IFFL-Ventilation-Flange-Profile.jpg",
+      "product_id": 29,
+      "vendor_code": "VS-1"
+    }
+  },
+  {
+    "name": "IFFLC Ventilation Duct Angle Piece",
+    "description": "Material S235JR Service Angle piece that is mounted to the flanges of rectangular air ducts, to enable their assembly to each other from the corners. The fixing bolt must be the same dimension with the ventilation clamp bolts, to accomplish the loading values in the catalogue.",
+    "local": "en",
+    "id": 30,
+    "vendor_code": "VS-1-1",
+    "price": 1,
+    "category": {
+      "name": "Ventilation Systems",
+      "description": "string",
+      "local": "en",
+      "id": 31,
+      "type_id": 7,
+      "image": "string"
+    },
+    "images": {
+      "name": "https://inkafixing.com/Uploads/images/Products/VS-1-1/IFFLC-Ventilation-Duct-Angle-Piece.jpg",
+      "product_id": 30,
+      "vendor_code": "VS-1-1"
+    }
+  },
+  {
+    "name": "Ventilation Clamp",
+    "description": "Material Carbon Steel Service The most ideal and economic element for assembling air ducts to each other from the flange. Easy clamping of profiles with the help of bolt screws. It has a rigit construction for high load carryig capacity. The clamp bolt must be the same dimensions with the flange bolts, to accomplish the loading values in the catalogue.",
+    "local": "en",
+    "id": 31,
+    "vendor_code": "VS-2",
+    "price": 1,
+    "category": {
+      "name": "Ventilation Systems",
+      "description": "string",
+      "local": "en",
+      "id": 31,
+      "type_id": 7,
+      "image": "string"
+    },
+    "images": {
+      "name": "https://inkafixing.com/Uploads/images/Products/VS-2/Ventilation-Clamp.jpg",
+      "product_id": 31,
+      "vendor_code": "VS-2"
+    }
+  },
+  {
+    "name": "IDGM Sleeve Anchor",
+    "description": "Service Economic and fast means of anchoring for medium load and low quality concrete. The sleeve which easily expands even in short holes and light loads insures safe anchoring and fastening properties. Suitable for fastening of vibrating elements.",
+    "local": "en",
+    "id": 32,
+    "vendor_code": "AS-1",
+    "price": 1,
+    "category": {
+      "name": "Drop-in Expansion Anchor",
+      "description": "string",
+      "local": "en",
+      "id": 27,
+      "type_id": 9,
+      "image": "string"
+    },
+    "images": {
+      "name": "https://inkafixing.com/Uploads/images/Products/AS-1/IDGM-Sleeve-Anchor.jpg",
+      "product_id": 32,
+      "vendor_code": "AS-1"
+    }
+  },
+  {
+    "name": "IDKL Monoclip Anchor",
+    "description": "Service Provides fast and easy setting Drill hole diameter=bolt diameter Suitable for anchoring at ceilings Suitable for fixing metal profiles, consoles and etc. Ordering Upon request can be manufactured stainless steel material (A2 & A4)",
+    "local": "en",
+    "id": 33,
+    "vendor_code": "AS-4",
+    "price": 1,
+    "category": {
+      "name": "Drop-in Expansion Anchor",
+      "description": "string",
+      "local": "en",
+      "id": 27,
+      "type_id": 9,
+      "image": "string"
+    },
+    "images": {
+      "name": "https://inkafixing.com/Uploads/images/Products/AS-4/IDKL-Monoclip-Anchor.jpg",
+      "product_id": 33,
+      "vendor_code": "AS-4"
+    }
+  }
+]
+
+
 
 
 

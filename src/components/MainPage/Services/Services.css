@@ -20,17 +20,17 @@
 
 }
 .Block-2 .Service{
-    height: 750px;
+    
     
 }
 img{
-    object-fit: cover;
+    object-fit:cover;
     object-position: center;
     width: 100%;
     
 }
 .service-image{
-    height: 70%;
+    height: 63%;
 
 }
 .desc{

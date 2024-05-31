@@ -8,6 +8,7 @@ const CATEGORY_URL = "/products/category/";
 const PRODUCTDETAILS_URL = "/"
 const TECHNOLOGIES_URL = "/technologies"
 const HIDROCATEGORIES_URL = "/products/isolation/categories"
+const CERTIFICATE_URL = "/certificates"
 
 export const useProducts = (local) => {
     const { setLoading } = useLoading();
@@ -228,3 +229,52 @@ export const useProductsByCategory = ( id) => {
     return { productList };
 
 }
+
+export const useCertificate  = (description) => {
+    const { setLoading } = useLoading();
+    const [productList, setProductList] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setLoading(true);
+            try {
+                const { data } = await axios.get(`/${description}${CERTIFICATE_URL}`, {
+                    headers: { "Content-Type": "application/json" }
+                });
+                setProductList(data);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        
+        fetchData();
+    }, [setLoading]);
+
+    return { productList };
+
+}
+
+// export const useCertifate = (description) => {
+//     const { setLoading } = useLoading();
+//     const [productList, setProductList] = useState([]);
+
+//     useEffect(() => {
+//         const fetchData = async () => {
+//             setLoading(true);
+//             try {
+//                 const { data } = await axios.get(`/${description}${CERTIFICATE_URL}`, {
+//                     headers: { "Content-Type": "application/json" }
+//                 });
+//                 setProductList(data);
+//             } catch (error) {
+//                 console.error(error);
+//             } finally {
+//                 setLoading(false);
+//             }
+//         };
+        
+//         fetchData();
+//     }, [setLoading]);
+// }

@@ -26,7 +26,7 @@ export default function Company(){
                         <a href="https://www.linkedin.com/company/asia-fixing-systems/">
                             <img src="https://cdn-icons-png.flaticon.com/128/3536/3536569.png" alt="" />
                         </a>
-                        <a href="https://wa.me/77476756477">
+                        <a href="https://wa.me/77059604407">
                             <img src="https://cdn-icons-png.flaticon.com/128/3536/3536479.png" alt="" />
                         </a>
                     </div>

@@ -26,9 +26,8 @@
 }
 .info{
     display: flex;
-    width:  100%;
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     gap: 15%;
     text-align: center;
     /* margin-right: 5%; */

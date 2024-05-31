@@ -1,19 +1,20 @@
 .installation-technology{
     background-image:linear-gradient( to right, rgba(0, 0, 0, 0.612), rgba(255, 255, 255, 0.249)),
     url('https://inkafixing.com/Uploads/images/Yap%C4%B1%20Tespit%20ve%20Cephe%20Sistemleri/Yap%C4%B1-Tespit-ve-Cephe-Sistemleri.jpg');
-    height: 100vh;
+    height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     color: #FFFFFF;
     font-family: "Oswald", Sans-serif;
     /* font-size: 7.5vw; */
+    padding-bottom: 5%
     
 }
 
 .installation-technology-description{
     font-size: 55px;
-    padding-top: 10%;
+    padding-top: 5%;
     padding-left: 10%;
     padding-right: 20%;
     color: white;

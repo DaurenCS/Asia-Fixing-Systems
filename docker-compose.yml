@@ -3,6 +3,8 @@ services:
   web:
     build: .
     container_name: web
+    ports:
+      - "80:80"
     environment:
       - NODE_ENV=production
 

@@ -17,11 +17,11 @@ export default function Contacts(){
 
                 <div className="contacts-details">
                     <img src="https://cdn-icons-png.flaticon.com/512/684/684853.png" alt="" />
-                    <h3>+7(747)675-64-77</h3>
+                    <h3><a href="tel:+77059604407">+7(705)960-44-07</a></h3>
                 </div>
                 <div className="contacts-details">
                     <img src="https://cdn-icons-png.flaticon.com/512/684/684869.png" alt="" />
-                    <h3>d_kozhakhmetov@kbtu.kz</h3>
+                    <h3> <a href="mailto:asiafixingsystems@gmail.com">asiafixingsystems@gmail.com</a> </h3>
                 </div>
                 <div className="contacts-details">
                     <img src="https://cdn-icons-png.flaticon.com/512/684/684850.png" alt="" />

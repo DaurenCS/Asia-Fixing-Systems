@@ -7,6 +7,7 @@ import { useTypes } from "../../../hooks/views";
 import { useNavigate, useParams } from "react-router-dom";
 import YouTubeVideo from "../../MainPage/YoutubeVideo";
 import { useTranslation } from "react-i18next";
+import { inst_types } from "../../../products";
 
 export default function InstallationSystem() {
     const {local} = useParams() 
@@ -43,7 +44,7 @@ export default function InstallationSystem() {
                         <h1>{t('isolation-benefits')}</h1>
                         <YouTubeVideo videoId="ZdKlDBbCwrE" />
                     </div>
-                    <InstallationServices types={types}  />
+                    <InstallationServices types={inst_types.filter(a => a.local == local)}  />
                     <div>
                         <>2024</>
                         

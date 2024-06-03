@@ -1,41 +1,36 @@
 
-const tech = [
+export const tech = [
     {
       "name": "isolation-system",
       "description": "Hidroisolation",
       "local": "en",
-      "image": "http://86.107.45.160:8000/upload/krystaline.png",
+      "image": "http://asiafix-pro.com:8000/upload/krystaline.png",
       "text": "Additives for concrete Waterproofing using C-S-H Technology"
     },
     {
       "name": "installation-system",
       "description": "Installation Systems",
       "local": "en",
-      "image": "http://86.107.45.160:8000/upload/inka.jpg",
+      "image": "http://asiafix-pro.com:8000/upload/inka.jpg",
       "text": "Inka Fixing continues to make your life easier with its structural connections, while making its impact felt in all areas of life. We are with you in all application areas with our smart solutions."
     },
     {
         "name": "isolation-system",
         "description": "Гидроизоляция",
         "local": "ru",
-        "image": "http://86.107.45.160:8000/upload/krystaline.png",
+        "image": "http://asiafix-pro.com:8000/upload/krystaline.png",
         "text": "Добавки для гидроизоляции бетона по технологии CSH"
       },
       {
         "name": "installation-system",
         "description": "Монтажные Системы",
         "local": "ru",
-        "image": "http://86.107.45.160:8000/upload/inka.jpg",
+        "image": "http://asiafix-pro.com:8000/upload/inka.jpg",
         "text": "Технология Inka Fixing продолжает упрощать вашу жизнь благодаря своим конструктивным соединениям, оказывая при этом ощутимое влияние на все сферы жизни. Мы готовы помочь вам во всех областях применения наших интеллектуальных решений."
       }
   ]
 
-  const types = [
-    {
-        "name": "Hidroisolation",
-        "description": "string",
-        "local": "en",
-      },
+ export const inst_types = [,
       {
         "name": "Installation Systems",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/installation-systems.jpg",
@@ -80,11 +75,6 @@ const tech = [
         "name": "Custom Production",
         "description": "https://inkafixing.com/Uploads/images/customer%20(1).jpg",
         "local": "en",
-      },
-      {
-        "name": "Гидроизоляция",
-        "description": "string",
-        "local": "ru",
       },
       {
         "name": "Монтажные системы",
@@ -134,38 +124,38 @@ const tech = [
 
   ]
 
-  const isolation_categories = [
+  export const isolation_categories = [
     {
         "name": "CONCRETE ADMIXTURES",
         "description": "Internal waterproofing for the entire life of the concrete.",
         "local": "en",
         "type_id": 1,
-        "image": "http://86.107.45.160:8000/upload/admixtures.jpg"
+        "image": "https://krystaline.es/wp-content/uploads/2023/11/krystaline-aditivosparahormigon-700x700-1.jpg"
       },
       {
         "name": "CONCRETE REPAIR",
         "description": "Surface applied protection and repair for the life of the concrete.",
         "local": "en",
         "type_id": 1,
-        "image": "http://86.107.45.160:8000/upload/repair.jpg"
+        "image": "https://krystaline.es/wp-content/uploads/2023/11/krystaline-morterosparahormigon-700x700-1.jpg"
       },
       {
         "name": "ДОБАВКИ ДЛЯ БЕТОНА",
         "description": "Внутренняя гидроизоляция на весь срок службы бетона.",
         "local": "ru",
         "type_id": 2,
-        "image": "http://86.107.45.160:8000/upload/admixtures.jpg"
+        "image": "https://krystaline.es/wp-content/uploads/2023/11/krystaline-aditivosparahormigon-700x700-1.jpg"
       },
       {
         "name": "РЕМОНТ БЕТОНА",
         "description": "Нанесенная на поверхность защита и ремонт на весь срок службы бетона.",
         "local": "ru",
         "type_id": 2,
-        "image": "http://86.107.45.160:8000/upload/repair.jpg"
+        "image": "https://krystaline.es/wp-content/uploads/2023/11/krystaline-morterosparahormigon-700x700-1.jpg"
       }
   ]
 
-  const IsolationProducts = [
+  export const IsolationProducts = [
         {
           "name": "KRYSTALINE ADD1",
           "description": "It is a hydrophilic C-S-H technology admixture that has proven to be very highly effective and compatible in a wide range of concrete mix designs. It has been designed to waterproof and increase the durability of concrete. It is certified as a waterproofing admixture and also as a water reducer/plasticizer and setting retarder. It is proven that Krystaline Add 1 provides excellent waterproofing performance,  increased resistances, protection of reinforcing steel against corrosion and ease of use. Dosed at 1 kg/m³ of concrete.",

@@ -17,12 +17,10 @@ export default function Company(){
                     </div>
                     <div className="text-decs">
                         <span className="text">{t('vision-text')}</span>
-                        <h3>aaa@gmail.com</h3>
+                        <h3> <a href="mailto:asiafixingsystems@gmail.com">asiafixingsystems@gmail.com</a> </h3>
                     </div>
                     <div className="contacts-icons">
-                        <a href="https://www.instagram.com/kozhakhmet_off/">
-                            <img src="https://cdn-icons-png.flaticon.com/128/1400/1400829.png" alt="" />
-                        </a>
+                        
                         <a href="https://www.linkedin.com/company/asia-fixing-systems/">
                             <img src="https://cdn-icons-png.flaticon.com/128/3536/3536569.png" alt="" />
                         </a>

@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import { useLoading } from "../Loader/LoadingContext";
 import Loader from "../Loader/Loader";
 import { useTechnologies } from "../../hooks/views";
+import { tech } from "../../products";
 
 export default function MainPage() {
     const location = useLocation();
@@ -17,6 +18,7 @@ export default function MainPage() {
     const { t } = useTranslation();
     const { loading, setLoading} = useLoading();
     const {productList: services} = useTechnologies(local)
+    
 
     useEffect(() => {
         if (location.state && location.state.targetId) {
@@ -74,7 +76,7 @@ export default function MainPage() {
                             <img src="" alt="" />
                         </div>
                     </div>
-                    <Services services={services} />
+                    <Services services={tech.filter(a => a.local == local)} />
                     <Company />
                     <Contacts />
                 </div>

@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { useHidroCategories } from "../../hooks/views";
 import Loader from "../Loader/Loader";
 import { useLoading } from "../Loader/LoadingContext";
+import { IsolationProducts, isolation_categories } from "../../products";
 
 export default function Isolation(){
     const { t } = useTranslation()
@@ -106,7 +107,7 @@ export default function Isolation(){
             </div>
         </div>
         <div className="Container-3">
-                <IsolationServices products={categories}></IsolationServices>
+                <IsolationServices products={isolation_categories.filter(a=> a.local == local)}></IsolationServices>
         </div> 
         <div className="Container-4">
             {/* <h1>WHY CHOOSE US</h1> */}

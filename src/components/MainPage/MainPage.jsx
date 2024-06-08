@@ -76,7 +76,7 @@ export default function MainPage() {
                             <img src="" alt="" />
                         </div>
                     </div>
-                    <Services services={tech.filter(a => a.local == local)} />
+                    <Services services={services} />
                     <Company />
                     <Contacts />
                 </div>

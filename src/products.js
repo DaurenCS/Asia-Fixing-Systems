@@ -4,28 +4,28 @@ export const tech = [
       "name": "isolation-system",
       "description": "Hidroisolation",
       "local": "en",
-      "image": "http://asiafix-pro.com:8000/upload/krystaline.png",
+      "image": "https://asiafix-pro.com/media/uploads/krystaline.png",
       "text": "Additives for concrete Waterproofing using C-S-H Technology"
     },
     {
       "name": "installation-system",
       "description": "Installation Systems",
       "local": "en",
-      "image": "http://asiafix-pro.com:8000/upload/inka.jpg",
+      "image": "https://asiafix-pro.com/media/uploads/inka.jpg",
       "text": "Inka Fixing continues to make your life easier with its structural connections, while making its impact felt in all areas of life. We are with you in all application areas with our smart solutions."
     },
     {
         "name": "isolation-system",
         "description": "Гидроизоляция",
         "local": "ru",
-        "image": "http://asiafix-pro.com:8000/media/uploads/krystaline.png",
+        "image": "https://asiafix-pro.com/media/uploads/krystaline.png",
         "text": "Добавки для гидроизоляции бетона по технологии CSH"
       },
       {
         "name": "installation-system",
         "description": "Монтажные Системы",
         "local": "ru",
-        "image": "http://asiafix-pro.com:8000/media/uploads/inka.jpg",
+        "image": "https://asiafix-pro.com/media/uploads/inka.jpg",
         "text": "Технология Inka Fixing продолжает упрощать вашу жизнь благодаря своим конструктивным соединениям, оказывая при этом ощутимое влияние на все сферы жизни. Мы готовы помочь вам во всех областях применения наших интеллектуальных решений."
       }
   ]

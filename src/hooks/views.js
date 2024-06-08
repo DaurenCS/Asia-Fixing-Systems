@@ -162,7 +162,7 @@ export const useTechnologies = (local) => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const { data } = await axios.get(`${TECHNOLOGIES_URL}?local=${local}`, {
+                const { data } = await axios.get(`${TECHNOLOGIES_URL}?format=json&local=${local}`, {
                     headers: { "Content-Type": "application/json" }
                 });
                 setProductList(data);

@@ -69,10 +69,17 @@
 
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 512px) {
     .header{
       font-size: 12px;
+      padding-left: 35%;
+      display: grid;
+      grid-template-columns: 75% 1% 30%;
+      /* display: block; */
     }
+    .user-info{
+      visibility: hidden;
+    }    
     .button-header button{
       width: 90%;
       height: 30px;

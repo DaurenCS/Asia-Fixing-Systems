@@ -68,19 +68,26 @@ img{
     cursor: pointer;
 }
 
-@media (max-width: 1024px ) {
+@media (max-width: 512px ) {
     .Block-2 .Services {
         gap: 30px;
+        height: 750px;
     }
 
     .Block-2 .Service{
         display: grid;
         grid-template-rows: 70% 30%;
-        height: 250px;
+        height: 100%;
 
     }
     .service-image{
         height: 100%;
+    }
+    .descriptions {
+        display: grid;
+        padding: 10px;
+        height: 30px;
+        overflow: hidden;
     }
     
 }

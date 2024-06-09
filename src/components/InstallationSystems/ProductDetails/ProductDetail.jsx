@@ -40,7 +40,7 @@ export default function InstallationProductDetails() {
                 </button>
             </div>
             <div className="image">
-                <img src={product.images.name} alt={product.name} />
+                <img src={product.vendor_code} alt={product.name} />
             </div>
         </div>
     );

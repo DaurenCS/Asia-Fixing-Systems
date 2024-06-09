@@ -110,6 +110,9 @@ video{
     padding: 2px;
     cursor: pointer;
 }
+.Container-3{
+    height: 100%;
+}
 
 
 .descripion-benefits h1{

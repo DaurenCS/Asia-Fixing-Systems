@@ -8,6 +8,9 @@ export default function Technology(){
     const navigate = useNavigate()
     const {t} = useTranslation()
     const { local } = useParams()
+
+
+
     return (
         <>
             <div className="Technology-1">

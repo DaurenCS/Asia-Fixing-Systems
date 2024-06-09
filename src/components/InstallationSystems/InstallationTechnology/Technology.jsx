@@ -17,12 +17,13 @@ export default function InstallationTechnology(){
                     </div>
                 </div>
                 <div id="Description" className="descc">
-                <h3><b>WHAT IS CSH TECHNOLOGY</b></h3>
-                <p></p>
+                <h3><b>INKA FIXING TECHNOLOGY</b></h3>
+                <p>{t('inka-tech-desc-1')}</p>
             </div>
             <div className="descc" id="uses-of-csh">
-                <h3><b></b></h3>
+                <h3><b>USES OF INKA FIXING TECHNOLOGY</b></h3>
                 <p>
+                    {t('inka-tech-desc-2')}
                 </p>
             </div>
                 

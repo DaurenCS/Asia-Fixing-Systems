@@ -16,7 +16,7 @@ export default function IsolationServices({ products: initialProducts }){
             async function fetchProducts() {
                 setLoading(true);
                 try {
-                    const response = await fetch(`http://86.107.45.160:8000/products/isolation/categories?local=${local}`);
+                    const response = await fetch(`https://asiafix-pro.com/api/products/isolation/categories?local=${local}`);
                     if (!response.ok) {
                         throw new Error(`HTTP error! Status: ${response.status}`);
                     }

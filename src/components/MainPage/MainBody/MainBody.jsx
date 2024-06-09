@@ -1,13 +1,16 @@
 import React from "react";
 import Header from "../Header/Header";
+import "./MainBody.css"
 import { Outlet } from "react-router-dom";
 
 export default function MainBody(){
     return(
         <>
-        <Header />
-        <Outlet />
-        <section className="ending">
+            <div className="body">
+                <Header />
+               
+                <Outlet className="outlet" />
+                        <div className="ending">
                         <div className="logo-icon">
                                 <div>TOO "Asia Fixing Systems"</div>
                             </div>
@@ -21,7 +24,10 @@ export default function MainBody(){
                                 <img src="https://asiafix-pro.com/media/uploads/whatsapp.png" alt="" />
                             </a>
                         </div>
-                    </section>
+                    </div>
+            </div>
+                
         </>
+        
     )
 }

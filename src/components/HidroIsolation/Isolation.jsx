@@ -110,7 +110,21 @@ export default function Isolation(){
                 <IsolationServices products={categories}></IsolationServices>
         </div> 
         <div className="Container-4">
-            {/* <h1>WHY CHOOSE US</h1> */}
+        <section className="ending">
+                        <div className="logo-icon">
+                        <div>TOO "Asia Fixing Systems"</div>
+                            </div>
+                            
+                        <div className="contacts-icons">
+                            
+                            <a href="https://www.linkedin.com/company/asia-fixing-systems/">
+                                <img src="https://asiafix-pro.com/media/uploads/in.png" alt="" />
+                            </a>
+                            <a href="https://wa.me/77059604407">
+                                <img src="https://asiafix-pro.com/media/uploads/whatsapp.png" alt="" />
+                            </a>
+                        </div>
+                    </section>
 
         </div> 
 

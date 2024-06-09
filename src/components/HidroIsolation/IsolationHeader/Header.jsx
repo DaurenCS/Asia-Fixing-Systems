@@ -33,11 +33,7 @@ export default function IsolationHeader() {
                         <button onClick={() => {navigate(`/${local}/contacts`)}} id="bbb">{t('contact_us')}</button>
                         <LanguageSwitcher />
 
-                    </div>
-                    
-                        
-                        
-                        
+                    </div>         
 
                 </div>
             </header>

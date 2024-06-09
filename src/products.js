@@ -30,96 +30,96 @@ export const tech = [
       }
   ]
 
- export const inst_types = [,
+ export const inst_types = [
       {
         "name": "Installation Systems",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/installation-systems.jpg",
-        "local": "en",
+        "local": "en"
       },
       {
         "name": "Modular Support Systems",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/modular-support-systems.jpg",
-        "local": "en",
+        "local": "en"
       },
       {
         "name": "Ventilation Systems",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/ventilation-systems.jpg",
-        "local": "en",
+        "local": "en"
       },
       {
         "name": "Anchor & Fixing Systems",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/eta-du%CC%88beller-foto.jpg",
-        "local": "en",
+        "local": "en"
       },
       {
         "name": "Couplings",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/couplings.jpg",
-        "local": "en",
+        "local": "en"
       },
       {
         "name": "PAM Global",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/Pam%20global.jpg",
-        "local": "en",
+        "local": "en"
       },
       {
         "name": "Automotive Products",
         "description": "https://inkafixing.com/Uploads/images/otomotiv.jpg",
-        "local": "en",
+        "local": "en"
       },
       {
         "name": "Solar Systems",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/solar-system.jpg",
-        "local": "en",
+        "local": "en"
       },
       {
         "name": "Custom Production",
         "description": "https://inkafixing.com/Uploads/images/customer%20(1).jpg",
-        "local": "en",
+        "local": "en"
       },
       {
         "name": "Монтажные системы",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/installation-systems.jpg",
-        "local": "ru",
+        "local": "ru"
       },
       {
         "name": "Модульные системы поддержки",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/modular-support-systems.jpg",
-        "local": "ru",
+        "local": "ru"
       },
       {
         "name": "Вентиляционные системы",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/ventilation-systems.jpg",
-        "local": "ru",
+        "local": "ru"
       },
       {
         "name": "Анкерные и Крепежные системы",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/eta-du%CC%88beller-foto.jpg",
-        "local": "ru",
+        "local": "ru"
       },
       {
         "name": "Муфты",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/couplings.jpg",
-        "local": "ru",
+        "local": "ru"
       },
       {
         "name": "Чугунные Трубы",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/Pam%20global.jpg",
-        "local": "ru",
+        "local": "ru"
       },
       {
         "name": "Автомобильная продукция",
         "description": "https://inkafixing.com/Uploads/images/otomotiv.jpg",
-        "local": "ru",
+        "local": "ru"
       },
       {
         "name": "Солнечные системы",
         "description": "https://inkafixing.com/Uploads/images/ProductGroups/solar-system.jpg",
-        "local": "ru",
+        "local": "ru"
       },
       {
         "name": "Индивидуальное производство",
         "description": "https://inkafixing.com/Uploads/images/customer%20(1).jpg",
-        "local": "ru",
+        "local": "ru"
       }
 
   ]

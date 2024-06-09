@@ -5,6 +5,7 @@
     align-content: center;
     display: grid;
     grid-template-columns: 30% 70% 10% ;
+    position: absolute;
     /* align-items: center; */
     /* padding: 10px 20px; */
     box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.15);

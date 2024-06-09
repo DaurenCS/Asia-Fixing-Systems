@@ -20,3 +20,12 @@
     color: white;
 }
 
+@media (max-width: 1024px) {
+    .installation-technology-description{
+        padding-left: 10%;
+        padding-top: 70%;
+        font-size: 150%;
+        padding-right: 10%;
+        height: 60vh;
+    }
+}

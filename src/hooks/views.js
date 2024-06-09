@@ -238,7 +238,7 @@ export const useCertificate  = (description) => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const { data } = await axios.get(`/${description}${CERTIFICATE_URL}`, {
+                const { data } = await axios.get(`${CERTIFICATE_URL}/${description}/`, {
                     headers: { "Content-Type": "application/json" }
                 });
                 setProductList(data);

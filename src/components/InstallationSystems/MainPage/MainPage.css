@@ -8,7 +8,7 @@
 .description{
     padding-top: 20%;
     padding-left: 10%;
-    padding-right: 45%;
+    padding-right: 25%;
     font-family: "Montserrat", sans-serif;
     color: white;
     margin-bottom: 15%;
@@ -48,4 +48,23 @@ image{
     border-radius:  15px 15px 15px 15px;
     overflow: hidden;
 
+}
+@media (max-width: 1024px) {
+    .description {
+        display: flex;
+        flex-direction: column;
+        padding-top: 95%;
+        padding-right: 5%;
+        margin-bottom: 50%;
+        gap: 55px;
+    }
+    .description h1{
+        font-size: 165%;
+    }
+    .videodesc{
+        height: 25vh;
+        border-radius:  15px 15px 15px 15px;
+        overflow: hidden;
+    
+    }
 }

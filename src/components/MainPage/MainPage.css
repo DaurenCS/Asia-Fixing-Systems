@@ -60,7 +60,7 @@
     padding-right: 4%;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 1024px) {
     .block-1{
         padding: 10%;
 

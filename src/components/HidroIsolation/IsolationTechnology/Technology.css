@@ -44,3 +44,22 @@
 #uses-of-csh{
     background-color: #F5F5F5
 }
+
+@media (max-width: 1024px) {
+    .Technology-1{
+        padding-left: 10%;
+        padding-top: 70%;
+        font-size: 150%;
+        padding-right: 10%;
+        height: 60vh;
+    }
+    .descc {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10%;
+        padding-right: 5%;
+        align-items: center;
+        height: max-content;
+        padding-bottom: 10%;
+    }
+}

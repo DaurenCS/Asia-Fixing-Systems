@@ -1,7 +1,9 @@
-.logo{
-    width: 75px;
+.logo {
+    display: flex;
+    align-items: center;
     gap: 10px;
     padding-left: 5%;
+    width: 75px;
 }
 .logo:hover{
     cursor: pointer;
@@ -13,18 +15,17 @@
 }
 
 .Header{
-    /* margin-top: 1%; */
-    width: 100%;
-    
+    /* width: 100%; */
     padding-bottom: 7px;
-
     background-color: white;
-    position: absolute;
     display: flex;
-    gap: 24%;
-   
-    color:black;
-
+    justify-content: space-between;
+    gap: 20%;
+    align-items: center;
+    padding: 10px;
+    color: black;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .info{
     display: flex;
@@ -41,19 +42,26 @@
 .info:hover{
     cursor: pointer;
 }
-button{
-    font-family: Sans-serif;
-    /* height: 30%; */
-
+button {
     font-size: 17px;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    fill: #FFFFFF;
-    color: black;
-    background-color: #FFFFFF00;
-    border-style: none;
-    transition: 0.2s;
-
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    transition: all 0.3s;
+}
+
 .contacts{
     display: grid;
     grid-template-columns: 90% 40%;
@@ -63,6 +71,43 @@ button{
     border-color: #5BBDB3;
     color: white;
 } */
-@media (max-width: 512px) {
-  
-  }
+@media (max-width: 768px) {
+    .Header{
+        background-color: #00000000;
+        box-shadow: none;
+    }
+    .info {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.532);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: max-height 0.3s ease, opacity 0.5s ease;
+        padding-bottom: 5px;
+    }
+    
+
+    .info.open {
+        opacity: 1;
+        display: flex;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .menu-icon.open .bar1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-icon.open .bar2 {
+        opacity: 0;
+    }
+
+    .menu-icon.open .bar3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}

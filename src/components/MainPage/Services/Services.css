@@ -68,7 +68,7 @@ img{
     cursor: pointer;
 }
 
-@media (max-width: 512px ) {
+@media (max-width: 1024px) {
     .Block-2 .Services {
         gap: 30px;
         height: 750px;

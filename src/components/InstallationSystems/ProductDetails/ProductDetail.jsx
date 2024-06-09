@@ -26,22 +26,33 @@ export default function InstallationProductDetails() {
     const sentences = product.description.split(/\.\s+/);
 
     return (
+        <>
         <div className="product-details">
             <div className="descriptions">
                 <h1 className="name">{product.name}</h1>
+                <div className="desccc">
+                <div>
                 {sentences.map((sentence, index) => (
                     <p key={index}>
-                        <span style={{ marginRight: '0.5rem' }}>&bull;</span>
-                        {sentence}
-                    </p>
+                     <span style={{ marginRight: '0.5rem' }}>&bull;</span>
+                        
+                        {sentence}</p>
                 ))}
-                <button id="bbb" onClick={() => navigate(`/${local}/contacts`)}>
-                    {t('request')}
-                </button>
+                <button id="bbb" onClick={() => {navigate(`/${local}/contacts`)}}>{t('request')}</button>
+                </div>
+                <div className="image">
+                    <img src={product.vendor_code} alt="" />
+                </div>
+                
+                
+                </div>    
             </div>
-            <div className="image">
-                <img src={product.vendor_code} alt={product.name} />
+            
+            
+            <div>
+
             </div>
         </div>
+        </>
     );
 }

@@ -2,10 +2,12 @@ import React from "react";
 import './ProductDetails.css'
 import { useLocation, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function IsolationProductDetails(){
     const navigate = useNavigate()
     const locate = useLocation()
+    const { t } = useTranslation()
     const {local} = useParams()
     const product = locate.state 
     // const product = 
@@ -25,16 +27,27 @@ export default function IsolationProductDetails(){
         <div className="product-details">
             <div className="descriptions">
                 <h1 className="name">{product.name}</h1>
+                <div className="desccc">
+                <div>
                 {sentences.map((sentence, index) => (
                     <p key={index}>
                      <span style={{ marginRight: '0.5rem' }}>&bull;</span>
                         
                         {sentence}</p>
                 ))}
-                <button id="bbb" onClick={() => {navigate(`/${local}/contacts`)}}>Request More Information</button>
+                <button id="bbb" onClick={() => {navigate(`/${local}/contacts`)}}>{t('request')}</button>
+                </div>
+                <div className="image">
+                    <img src={product.vendor_code} alt="" />
+                </div>
+                
+                
+                </div>    
             </div>
-            <div className="image">
-                <img src={product.vendor_code} alt="" />
+            
+            
+            <div>
+
             </div>
         </div>
         </>

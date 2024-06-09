@@ -28,3 +28,11 @@
     flex-grow: 1;
     flex-basis: 200;   
 } */
+
+@media (max-width: 1024px) {
+    .hidroisolation-product-elements .Services {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}

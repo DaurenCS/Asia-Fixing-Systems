@@ -1,5 +1,12 @@
 .product-details .descriptions{
     padding-bottom: 100px;
+  
+}
+.desccc{
+    display: grid;
+    grid-template-columns: 50% 50%  ;
+    align-items: center;
+    gap: 45px;
 }
 .descriptions button{
     margin-top: 25px;
@@ -17,9 +24,27 @@
 .product-details{
     display: flex;
     padding: 10%;
+    padding-top: 5px;
     align-items: center
 
 }
 .product-details img{
     border-radius: 15px;
+}
+
+@media (max-width: 1024px) {
+    .product-details .descriptions{
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+    }
+    .product-details {
+        flex-direction: column;
+    }
+    .desccc {
+        display: flex;
+       flex-direction: column-reverse;
+       padding-bottom: 25px;
+    }
+  
 }

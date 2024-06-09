@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function IsolationProductDetails(){
     const navigate = useNavigate()
     const locate = useLocation()
+    const {local} = useParams()
     const product = locate.state 
     // const product = 
     //     {
@@ -30,7 +31,7 @@ export default function IsolationProductDetails(){
                         
                         {sentence}</p>
                 ))}
-                <button id="bbb" onClick={() => {navigate("/contacts")}}>Request More Information</button>
+                <button id="bbb" onClick={() => {navigate(`/${local}/contacts`)}}>Request More Information</button>
             </div>
             <div className="image">
                 <img src={product.vendor_code} alt="" />

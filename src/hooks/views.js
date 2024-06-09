@@ -69,7 +69,7 @@ export const useProductByCategory = (id) => {
             if (id) {
                 setLoading(true);
                 try {
-                    const { data } = await axios.get(`${CATEGORY_URL}${id}/`, {
+                    const { data } = await axios.get(`${CATEGORY_URL}${id}`, {
                         headers: { "Content-Type": "application/json" }
                     });
                     setProductList(data);

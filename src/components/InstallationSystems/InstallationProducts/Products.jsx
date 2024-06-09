@@ -50,8 +50,8 @@ export default function InstallationProducts() {
                                     productList.map(product => (
                                         <div key={product.id} className="installation-product">
                                             <div>
-                                                <img src={product.images.name} alt={product.name} />
-                                                {/* <img src={product.vendor_code} alt={product.name} /> */}
+                                                {/* <img src={product.images.name} alt={product.name} /> */}
+                                                <img src={product.vendor_code} alt={product.name} />
 
                                                 {product.name}
                                             </div>

@@ -1,5 +1,5 @@
 .block-1 {
-    height: 450px;
+    height: 86vh;
     background-image:linear-gradient( to right, rgba(255, 255, 255, 0.349), rgba(134, 134, 134, 0.249)),
     url('http://asiafix-pro.com/media/uploads/main-image.webp');
     
@@ -41,6 +41,23 @@
     background-color: #ffffff;
     color: black;
     cursor: pointer;
+}
+.ending{
+    padding-left: 5%;
+    background-color: #f3f3f3de;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ending .logo-icon{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+.ending .contacts-icons{
+    width: 4%;
+    padding-right: 4%;
 }
 
 @media (max-width: 1024px) {

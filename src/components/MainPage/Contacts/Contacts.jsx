@@ -16,15 +16,15 @@ export default function Contacts(){
                 <div className="contact-details">
 
                 <div className="contacts-details">
-                    <img src="https://cdn-icons-png.flaticon.com/512/684/684853.png" alt="" />
+                    <img src="https://asiafix-pro.com/media/uploads/phone.png" alt="" />
                     <h3><a href="tel:+77059604407">+7(705)960-44-07</a></h3>
                 </div>
                 <div className="contacts-details">
-                    <img src="https://cdn-icons-png.flaticon.com/512/684/684869.png" alt="" />
+                    <img src="https://asiafix-pro.com/media/uploads/mail.png" alt="" />
                     <h3> <a href="mailto:asiafixingsystems@gmail.com">asiafixingsystems@gmail.com</a> </h3>
                 </div>
                 <div className="contacts-details">
-                    <img src="https://cdn-icons-png.flaticon.com/512/684/684850.png" alt="" />
+                    <img src="https://asiafix-pro.com/media/uploads/location.png" alt="" />
                     <h3><address>{t('contact-address')}</address></h3>
                 </div>
                    

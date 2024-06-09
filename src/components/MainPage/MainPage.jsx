@@ -10,6 +10,7 @@ import { useLoading } from "../Loader/LoadingContext";
 import Loader from "../Loader/Loader";
 import { useTechnologies } from "../../hooks/views";
 import { tech } from "../../products";
+import logo from '../MainPage/Header/logoo.png';
 
 export default function MainPage() {
     const location = useLocation();

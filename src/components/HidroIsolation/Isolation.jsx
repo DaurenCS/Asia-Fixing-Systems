@@ -107,7 +107,7 @@ export default function Isolation(){
             </div>
         </div>
         <div className="Container-3">
-                <IsolationServices products={isolation_categories.filter(a=> a.local == local)}></IsolationServices>
+                <IsolationServices products={categories}></IsolationServices>
         </div> 
         <div className="Container-4">
             {/* <h1>WHY CHOOSE US</h1> */}

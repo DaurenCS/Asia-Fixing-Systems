@@ -44,7 +44,7 @@ export default function InstallationSystem() {
                         <h1>{t('isolation-benefits')}</h1>
                         <YouTubeVideo videoId="ZdKlDBbCwrE" />
                     </div>
-                    <InstallationServices types={inst_types.filter(a => a.local == local)}  />
+                    <InstallationServices types={types}  />
                     <div>
                         <>2024</>
                         

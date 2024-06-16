@@ -8,6 +8,7 @@ import { useHidroCategories } from "../../hooks/views";
 import Loader from "../Loader/Loader";
 import { useLoading } from "../Loader/LoadingContext";
 import { IsolationProducts, isolation_categories } from "../../products";
+import video from  "./main_krystaline.mp4" 
 
 export default function Isolation(){
     const { t } = useTranslation()
@@ -53,9 +54,18 @@ export default function Isolation(){
         
                 }
             ]
-    useEffect(() => {
-                window.scrollTo(0, 0); 
-            }, []);
+            useEffect(() => {
+                window.scrollTo(0, 0);
+                setLoading(true);
+                
+                const videoElement = document.getElementById('video-container');
+                if (videoElement) {
+                    videoElement.play().catch(error => {
+                        console.log('Autoplay was prevented:', error);
+                    });
+                }
+        
+            }, [setLoading]);
 
     return(
         <>
@@ -65,8 +75,8 @@ export default function Isolation(){
             <div>
         <div className="Container-1">
             <div className="video">
-                <video autoPlay loop muted id="video">
-                    <source src="https://krystaline.es/wp-content/uploads/2023/10/krystaline_aditivoshormigon_impermeabilizacion.mp4" type="video/mp4" />
+                <video autoPlay loop muted playsInline id="video">
+                    <source src={video} type="video/mp4" />
                 </video>
             </div>
 

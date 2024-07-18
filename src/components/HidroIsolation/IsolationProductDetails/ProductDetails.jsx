@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './ProductDetails.css'
 import { useLocation, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +10,9 @@ export default function IsolationProductDetails(){
     const { t } = useTranslation()
     const {local} = useParams()
     const product = locate.state 
+    useEffect(() => {
+        window.scrollTo(0, 0); 
+    }, []);
     // const product = 
     //     {
     //         url : "https://krystaline.es/wp-content/uploads/2023/11/krystaline-add1-bote-700x700-1.jpg",
@@ -19,6 +22,7 @@ export default function IsolationProductDetails(){
         if (!product.description) {
             return null; // Return null or handle the case where description is undefined
         }
+        
 
         const sentences = product.description.split(/\.\s+/);
     

@@ -48,7 +48,7 @@ export default function IsolationServices({ products: initialProducts }){
                                         onClick={() => {
                                             navigate(`/${local}/isolation-system/products/${product.id}`, {state: product } );
                                         }}
-                                        style={{ backgroundImage: `url(${product.image})` }}
+                                        style={{ backgroundImage: `url(${product.image} )` }}
                                     >
                                         <div className="hidro-product-text">
                                             <h3>{product.name}</h3>

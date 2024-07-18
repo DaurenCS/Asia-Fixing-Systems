@@ -1,6 +1,8 @@
 import React from "react";
 import "./Contacts.css"
 import { useTranslation } from "react-i18next";
+import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
+
 export default function Contacts(){
 
     const { t } = useTranslation()
@@ -17,7 +19,7 @@ export default function Contacts(){
 
                 <div className="contacts-details">
                     <img src="https://asiafix-pro.com/media/uploads/phone.png" alt="" />
-                    <h3><a href="tel:+77059604407">+7(705)960-44-07</a></h3>
+                    <h3><a href="tel:+77017514888">+7(701)751-48-88</a></h3>
                 </div>
                 <div className="contacts-details">
                     <img src="https://asiafix-pro.com/media/uploads/mail.png" alt="" />
@@ -25,13 +27,21 @@ export default function Contacts(){
                 </div>
                 <div className="contacts-details">
                     <img src="https://asiafix-pro.com/media/uploads/location.png" alt="" />
-                    <h3><address>{t('contact-address')}</address></h3>
+                    <h3><a href="https://go.2gis.com/eoxlp"><address>{t('contact-address')}</address></a></h3>
                 </div>
+                
                    
                  </div>
             </div>
             <div className="contact-image">
-                <img src="https://media-public.canva.com/eWcvE/MAEmn_eWcvE/1/s2.jpg" alt="" />
+                <YMaps>
+                    <div>
+                    <Map  width="100wh" height="400px" defaultState={{ center: [43.182755, 76.8174], zoom: 15,  controls: ["zoomControl", "fullscreenControl"],  }} modules={["control.ZoomControl", "control.FullscreenControl"]}>
+                        <Placemark defaultGeometry={[43.182369, 76.816440]} />
+                    </Map>
+                    
+                    </div>
+                </YMaps>
             </div>
             
             

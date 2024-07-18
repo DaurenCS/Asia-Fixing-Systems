@@ -35,6 +35,7 @@
     color: white;
     border: solid 3px #004258;
     padding: 10px 30px ;
+    transition: 0.2s;
 }
 
 #bbb:hover{

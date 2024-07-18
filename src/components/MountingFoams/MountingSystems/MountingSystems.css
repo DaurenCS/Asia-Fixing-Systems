@@ -1,0 +1,67 @@
+.foam-image .video{
+    background-image: url("https://sealaxpro.com/images/banner_sealax_main1.png");
+    top: 105px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 125%; */
+    height: 90%;
+    overflow-x: hidden;
+}
+.main-page-installation-system{
+    width: 100%;
+}
+.foams-product{
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.youtube-video-1{
+    display: grid;
+    grid-template-columns: 60% 35%;
+    gap: 10%;
+    font-size: 18px;
+}
+.foams-categories{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    grid-row-gap: 30px;
+    /* margin-top: 30px; */
+    padding: 1% 10% 5% 10%;
+}
+.foams-category{
+    border: 1px solid #ededed;
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+    top: 0;
+    background: #fff;
+    transition: 0.2s;
+    
+
+}
+
+.foams-category:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(66, 66, 66, 0.5);
+    scale: 1.015;
+}
+
+@media (max-width: 1024px) {
+    .description{
+        padding-top: 50%;
+    }
+    .foams-categories{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .youtube-video-1{
+        padding-left: 10px;
+        padding-right: 10px;
+
+        grid-template-columns: 100%;
+        padding-bottom: 35%;
+        height: max-content;
+    }
+
+}

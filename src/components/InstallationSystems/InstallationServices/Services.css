@@ -23,7 +23,6 @@
 }
 .Service-1{
     border-radius: 15px 15px 15px 15px;
-
     overflow: hidden;
     background-color: #edeef3;
     
@@ -98,7 +97,10 @@
     scrollbar-width: none; 
     -ms-overflow-style: none;
   }
-
+  
+  .installation-products-l img{
+    max-height: 270px;
+  }
   
   .Service-1{
     width: 32.6%;

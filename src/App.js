@@ -5,6 +5,7 @@ import MainBody from './components/MainPage/MainBody/MainBody';
 import Company from './components/MainPage/Company/Company';
 import MainPage from './components/MainPage/MainPage';
 import Isolation from './components/HidroIsolation/Isolation';
+import MountingBody from './components/MountingFoams/MountingBody/MountingBody';
 import IsolationBody from './components/HidroIsolation/IsolationBody/IsolationBody';
 import IsolationProducts from './components/HidroIsolation/IsolationProducts/IsolationProducts';
 import IsolationServices from './components/HidroIsolation/IsolationServices/Services';
@@ -21,6 +22,9 @@ import InstallationProductDetails from './components/InstallationSystems/Product
 import InstallationSystem from './components/InstallationSystems/MainPage/MainPage';
 import { useTranslation } from 'react-i18next';
 import './i18n';
+import MountingSystem from './components/MountingFoams/MountingSystems/MountingSystems';
+import MountingProducts from './components/MountingFoams/MountingProducts/MountingProducts';
+import MountingCertificate from './components/MountingFoams/MountingCertificates/MountingCertificates';
 
 const LanguageWrapper = ({ children }) => {
   const { i18n } = useTranslation();
@@ -68,6 +72,16 @@ function App() {
           <Route path="product/:product_id" element={<InstallationProductDetails />} />
           <Route path="certificates" element={<InstallationCertificate />} />
           <Route path="technology" element={<InstallationTechnology />} />
+        </Route>
+
+        <Route path="/:local/mounting-foams" element={<MountingBody />}>
+          <Route index element={<MountingSystem />} />
+          {/* <Route path="products" element={<InstallationProducts />} /> */}
+          <Route path="products/:id" element={<MountingProducts />} />
+          <Route path="product/:product_id" element={<InstallationProductDetails />} />
+          <Route path="products/:id/:product_id" element={<IsolationProductDetails />} />
+          <Route path="certificates" element={<MountingCertificate />} />
+          {/* <Route path="technology" element={<InstallationTechnology />} /> */}
         </Route>
 
         <Route path="*" element={<Navigate to="/en" />} />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './Products.css';
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useProductsOrType, useTypes} from "../../../hooks/views";
@@ -11,7 +11,9 @@ export default function InstallationProducts() {
     const {local} = useParams()
     const locate = useLocation()
     const type = locate.state || []
-
+    useEffect(() => {
+        window.scrollTo(0, 0); 
+    }, []);
     const { loading } = useLoading();
     const navigate = useNavigate()
     const { productList } = useProductsOrType(id, local);

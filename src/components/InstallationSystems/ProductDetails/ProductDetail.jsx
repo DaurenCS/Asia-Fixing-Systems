@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useProductDetails } from "../../../hooks/views";
 import Loader from "../../Loader/Loader";
@@ -14,6 +14,10 @@ export default function InstallationProductDetails() {
     const { local } = useParams()
 
     const { t } = useTranslation()
+
+    useEffect(() => {
+        window.scrollTo(0, 0); 
+    }, []);
 
     if (loading) {
         return <Loader />;

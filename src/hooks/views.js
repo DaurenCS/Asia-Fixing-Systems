@@ -5,10 +5,11 @@ import { useLoading } from "../components/Loader/LoadingContext";
 const FOODLIST_URL = "/products";
 const TYPELIST_URL = "/types-with-categories";
 const CATEGORY_URL = "/products/category/";
-const PRODUCTDETAILS_URL = "/"
+const CATEGORIES_URL = "/categories/"
 const TECHNOLOGIES_URL = "/technologies"
 const HIDROCATEGORIES_URL = "/products/isolation/categories"
 const CERTIFICATE_URL = "/certificates"
+
 
 export const useProducts = (local) => {
     const { setLoading } = useLoading();
@@ -177,6 +178,30 @@ export const useTechnologies = (local) => {
     }, [setLoading]);
 
     return { productList };
+};
+export const useFoamsCategories = (local) => {
+    const { setLoading } = useLoading();
+    const [typelist, setTypelist] = useState([]);
+    const id = local === 'ru' ? 30 : local === 'en' ? 29 : null;
+    useEffect(() => {
+        const fetchData = async () => {
+            setLoading(true);
+            try {
+                const { data } = await axios.get(`${CATEGORIES_URL}${id}`, {
+                    headers: { "Content-Type": "application/json" }
+                });
+                setTypelist(data);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, [setLoading]);
+
+    return { typelist };
 };
 
 export const useHidroCategories = (local) => {
